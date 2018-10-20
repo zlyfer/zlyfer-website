@@ -1,31 +1,5 @@
 <html>
-<?php
-error_reporting(0);
- function genCards($name) {
-		$html = '';
-		$pages = scandir('./pages/'.$name.'/');
-		for ($i=0; $i < count($pages); $i++) {
-			if ($pages[$i] != '.' && $pages[$i] != '..' && $pages[$i] != '.gitkeep') {
-				$card = '<div class="col s12 m3">
-					<div class="card hoverable">
-						<div class="card-image">
-							<img src="./images/'.$name.'/'.$pages[$i].'.png">
-							<span style="font-weight: bold;" class="grey-text text-darken-3 card-title">'.$pages[$i].'</span>
-						</div>
-						<div class="card-content">
-						'.file_get_contents("./descriptions/".$name.'/'.$pages[$i].".html").'
-						</div>
-						<div class="card-action">
-							<a class="waves-effect waves-dark btn green grey-text text-lighten-5" href="./pages/'.$name.'/'.$pages[$i].'/">Visit Page</a>
-						</div>
-					</div>
-				</div>'."\n";
-				$html = $html.$card;
-			}
-		}
-		return $html;
-	}
-?>
+<?php include('./php/php.php');?>
 	<head>
 		<title>zlyfer - Home</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -44,11 +18,11 @@ error_reporting(0);
 			<div class="navbar-fixed">
 				<nav class="green">
 					<ul class="left hide-on-med-and-down">
-						<li class="waves-effect tooltipped"><a href="./?page=home">Home</a></li>
-						<li class="waves-effect tooltipped"><a href="./?page=games">Games</a></li>
-						<li class="waves-effect tooltipped"><a href="./?page=visual-demonstrations">Visual Demonstrations</a></li>
-						<li class="waves-effect tooltipped"><a href="./?page=bbs2-emden">BBS II Emden</a></li>
-						<li class="waves-effect tooltipped"><a href="./?page=miscellaneous">Miscellaneous</a></li>
+						<li class="<?php if ($active == "home") {echo("active");}?> waves-effect"><a href="./?page=home">Home</a></li>
+						<li class="<?php if ($active == "games") {echo("active");}?> waves-effect"><a href="./?page=games">Games</a></li>
+						<li class="<?php if ($active == "visual-demonstrations") {echo("active");}?> waves-effect"><a href="./?page=visual-demonstrations">Visual Demonstrations</a></li>
+						<li class="<?php if ($active == "bbs2-emden") {echo("active");}?> waves-effect"><a href="./?page=bbs2-emden">BBS II Emden</a></li>
+						<li class="<?php if ($active == "miscellaneous") {echo("active");}?> waves-effect"><a href="./?page=miscellaneous">Miscellaneous</a></li>
 					</ul>
 					<ul class="right hide-on-med-and-down">
 						<li><a class="waves-effect" href="./?page=impressum">Impressum</a></li>
@@ -58,11 +32,11 @@ error_reporting(0);
 				</nav>
 			</div>
 			<ul id="slide-out" class="sidenav">
-				<li><a class="waves-effect" href="./?page=home"><i class="material-icons">home</i>Home</a></li>
-				<li><a class="waves-effect" href="./?page=games"><i class="material-icons">insert_emoticon</i>Games</a></li>
-				<li><a class="waves-effect" href="./?page=visual-demonstrations"><i class="material-icons">filter_tilt_shift</i>Visual Demonstrations</a></li>
-				<li><a class="waves-effect" href="./?page=bbs2-emden"><i class="material-icons">school</i>BBS II Emden</a></li>
-				<li><a class="waves-effect" href="./?page=miscellaneous"><i class="material-icons">bubble_chart</i>Miscellaneous</a></li>
+				<li><a class="<?php if ($active == "home") {echo("grey lighten-1");}?> waves-effect" href="./?page=home"><i class="material-icons">home</i>Home</a></li>
+				<li><a class="<?php if ($active == "games") {echo("grey lighten-1");}?> waves-effect" href="./?page=games"><i class="material-icons">insert_emoticon</i>Games</a></li>
+				<li><a class="<?php if ($active == "visual-demonstrations") {echo("grey lighten-1");}?> waves-effect" href="./?page=visual-demonstrations"><i class="material-icons">filter_tilt_shift</i>Visual Demonstrations</a></li>
+				<li><a class="<?php if ($active == "bbs2-emden") {echo("grey lighten-1");}?> waves-effect" href="./?page=bbs2-emden"><i class="material-icons">school</i>BBS II Emden</a></li>
+				<li><a class="<?php if ($active == "miscellaneous") {echo("grey lighten-1");}?> waves-effect" href="./?page=miscellaneous"><i class="material-icons">bubble_chart</i>Miscellaneous</a></li>
 				<li>
 					<div class="divider"></div>
 				</li>
@@ -74,7 +48,7 @@ error_reporting(0);
 			<div class="parallax-container">
 				<div class="parallax"><img src="./images/banner.png"></div>
 			</div>
-			<div class="row">
+			<div class="container">
 <?php
 	$pages = scandir('./pages');
 	if ($_GET["page"] == "." || $_GET["page"] == "..") {
@@ -91,13 +65,20 @@ error_reporting(0);
 		</main>
 
 		<footer class="page-footer green darken-2">
-			<div class="footer-copyright">
-				<div class="container">
-					<span class="left">© 2018 Frederik Shull</span>
-					<a class="hoverable waves-effect waves-dark btn right grey-text text-lighten-5 green darken-2" href="https://www.deviantart.com/zlyfer">DeviantArt</a>
-					<a class="hoverable waves-effect waves-dark btn right grey-text text-lighten-5 blue darken-2" href="https://www.facebook.com/frederik.shull">Facebook</a>
-					<a class="hoverable waves-effect waves-dark btn right grey-text text-lighten-5 red darken-2" href="https://www.youtube.com/channel/UCz57bHmcp5TGRY6URQYWLkQ">Youtube</a>
-					<a class="hoverable waves-effect waves-dark btn right grey-text text-lighten-5 grey darken-2" href="https://github.com/zlyfer">GitHub</a>
+			<div class="container center">
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-2" target="_blank" href="https://github.com/zlyfer">GitHub</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 red darken-2" target="_blank" href="https://www.youtube.com/channel/UCz57bHmcp5TGRY6URQYWLkQ">Youtube</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 blue darken-2" target="_blank" href="https://www.facebook.com/frederik.shull">Facebook</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 pink darken-2" target="_blank" href="https://www.instagram.com/zlyfer/">Instagram</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken-1" target="_blank" href="https://steamcommunity.com/id/zlyfer/">Spotify</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-3" target="_blank" href="https://open.spotify.com/user/zlyfer">Steam</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken" target="_blank" href="https://www.deviantart.com/zlyfer">DeviantArt</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" target="_blank" href="https://www.twitch.tv/ziyfer">Twitch</a>
+				<div class="row"></div>
+			</div>
+				<div class="footer-copyright">
+					<div class="container">
+					© 2018 Frederik Shull
 				</div>
 			</div>
 		</footer>
