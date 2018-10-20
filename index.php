@@ -37,9 +37,7 @@
 				<li><a class="<?php if ($active == "visual-demonstrations") {echo("grey lighten-1");}?> waves-effect" href="./?page=visual-demonstrations"><i class="material-icons">filter_tilt_shift</i>Visual Demonstrations</a></li>
 				<li><a class="<?php if ($active == "bbs2-emden") {echo("grey lighten-1");}?> waves-effect" href="./?page=bbs2-emden"><i class="material-icons">school</i>BBS II Emden</a></li>
 				<li><a class="<?php if ($active == "miscellaneous") {echo("grey lighten-1");}?> waves-effect" href="./?page=miscellaneous"><i class="material-icons">bubble_chart</i>Miscellaneous</a></li>
-				<li>
-					<div class="divider"></div>
-				</li>
+				<div class="divider"></div>
 				<li><a class="<?php if ($active == "impressum") {echo("grey lighten-1");}?> waves-effect" href="./?page=impressum"><i class="material-icons">info</i>Impressum</a></li>
 			</ul>
 		</header>

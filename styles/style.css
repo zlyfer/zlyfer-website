@@ -37,17 +37,17 @@ main {
 }
 
 #slide-out li {
-	height: 64px;
+	height: 128px;
 }
 
 #slide-out li a {
-	height: 64px;
-	line-height: 64px;
-	font-size: 18px;
+	height: 128px;
+	line-height: 128px;
+	font-size: 36px;
 }
 
 #slide-out li a i {
-	height: 64px;
-	line-height: 64px;
-	font-size: 22px;
+	height: 128px;
+	line-height: 128px;
+	font-size: 44px;
 }
