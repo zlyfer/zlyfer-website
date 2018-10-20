@@ -1,0 +1,103 @@
+/*
+    -o-
+    -ms-
+    -moz-
+    -webkit-
+*/
+
+:root {
+
+    --accent--1: hsl(220, 40%, 48%);
+    --accent0: hsl(220, 40%, 50%);
+    --accent-1: hsl(220, 40%, 52%);
+
+}
+
+* {
+
+    background-color: var(--accent0);
+
+}
+
+div.box {
+
+    position: absolute;
+
+    border: 1px solid white;
+    background-color: var(--accent0);
+    background-color: transparent;
+
+    box-shadow: 0 0 25px white;
+    -o-box-shadow: 0 0 25px white;
+    -ms-box-shadow: 0 0 25px white;
+    -moz-box-shadow: 0 0 25px white;
+    -webkit-box-shadow: 0 0 25px white;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+
+}
+
+div.box:hover {
+
+    background-color: var(--accent-1);
+
+}
+
+div.box:active {
+
+    background-color: var(--accent--1);
+
+}
+
+div.box.circle {
+    border-radius: 50%;
+}
+div.box.circle.small {
+    width: 20vh;
+    height: 20vh;
+}
+div.box.circle.normal {
+    width: 30vh;
+    height: 30vh;
+}
+div.box.circle.big {
+    width: 40vh;
+    height: 40vh;
+}
+div.box.rect.small {
+    width: 20vw;
+    height: 20vh;
+}
+div.box.rect.normal {
+    width: 30vw;
+    height: 30vh;
+}
+div.box.rect.big {
+    width: 40vw;
+    height: 40vh;
+}
+div.box.square.small {
+    width: 20vh;
+    height: 20vh;
+}
+div.box.square.normal {
+    width: 30vh;
+    height: 30vh;
+}
+div.box.square.big {
+    width: 40vh;
+    height: 40vh;
+}
+
+div.box.dropspace {
+    box-shadow: 0 0 35px white inset;
+    -o-box-shadow: 0 0 35px white inset;
+    -ms-box-shadow: 0 0 35px white inset;
+    -moz-box-shadow: 0 0 35px white inset;
+    -webkit-box-shadow: 0 0 35px white inset;
+}

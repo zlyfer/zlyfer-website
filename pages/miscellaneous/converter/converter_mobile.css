@@ -1,0 +1,59 @@
+/* Variables */
+:root {
+	--accent-color: #6fcc9f;
+	--detail-color: #3075e5;
+	--primary-color: #fff;
+}
+/* Tags */
+* {
+	background-color: #4085f5;
+}
+hr {
+	border-color: var(--accent-color);
+}
+textarea {
+	border: none;
+	width: 98%;
+	height: 40%;
+	resize: none;
+	margin: 0 2% 0 2%;
+	background-color: var(--accent-color);
+	color: var(--primary-color);
+	font-style: monospace;
+	font-size: 3vh;
+}
+textarea:active {
+	outline:0px !important;
+    -webkit-appearance:none;
+	color: var(--primary-color);
+}
+textarea:focus {
+	outline:0px !important;
+    -webkit-appearance:none;
+	color: var(--primary-color);
+}
+/* Classes */
+.box {
+	width: 90vw;
+	height: 20%;
+	border: 1px solid var(--detail-color);
+	border-radius: 3px;
+	box-shadow: 4px 4px 5px var(--detail-color);
+	margin: 3vh 6vw 0 4vw;
+	background-color: var(--accent-color);
+}
+.box:hover {
+	border-color: var(--accent-color);
+}
+/* IDs */
+#sitetitle {
+	text-align: center;
+	color: var(--primary-color);
+}
+#boxtitle {
+	color: var(--primary-color);
+	background-color: var(--accent-color);
+	padding-left: 2%;
+	font-weight: bold;
+	font-size: 2vh;
+}

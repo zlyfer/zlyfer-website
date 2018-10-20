@@ -1,0 +1,75 @@
+/* Variables */
+:root {
+	--accent-color: #6fcc9f;
+	--detail-color: #3075e5;
+	--primary-color: #fff;
+}
+/* Tags */
+* {
+	background-color: #4085f5;
+}
+hr {
+	border-color: var(--accent-color);
+}
+textarea {
+	border: none;
+	width: 95%;
+	height: 85%;
+	resize: none;
+	margin: 0 2% 0 2%;
+	background-color: var(--accent-color);
+	color: var(--primary-color);
+	font-style: monospace;
+	font-size: 3vh;
+}
+textarea:active {
+	outline:0px !important;
+    -webkit-appearance:none;
+	color: var(--primary-color);
+}
+textarea:focus {
+	outline:0px !important;
+    -webkit-appearance:none;
+	color: var(--primary-color);
+}
+/* Classes */
+.box {
+	width: 23%;
+	height: 73vh;
+	position: absolute;
+	border: 1px solid var(--detail-color);
+	border-radius: 3px;
+	box-shadow: 4px 4px 5px var(--detail-color);
+	margin-top: 5vh;
+	background-color: var(--accent-color);
+}
+.box:hover {
+	border-color: var(--accent-color);
+	transform: scale(1.01);
+}
+.box.dec {
+	margin-left: 2.5%;
+}
+.box.bin {
+	margin-left: 26%;
+}
+.box.hex {
+	margin-left: 49.5%;
+}
+.box.oct {
+	margin-left: 73%;
+}
+/* IDs */
+#sitetitle {
+	margin-top: 2vh;
+	text-align: center;
+	color: var(--primary-color);
+}
+#boxtitle {
+	text-align: center;
+	color: var(--primary-color);
+	padding-left: 2%;
+	background-color: var(--accent-color);
+	font-weight: bold;
+	font-size: 3vh;
+}

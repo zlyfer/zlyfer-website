@@ -1,0 +1,35 @@
+body {
+    background-color: #222;
+}
+
+#container {
+    position: fixed;
+    /* background-color: lawngreen; */
+    top: 8vh;
+    left: 20vh;
+    height: auto;
+    width: auto;
+}
+
+.field {
+    margin-bottom: 2px;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    position: absolute;
+/*    -webkit-box-shadow: 0 0 0 1px white inset;*/
+}
+
+.field:hover {
+    opacity: 0.5;
+}
+
+#color {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 5vw;
+    height: 100vh;
+    cursor: pointer;
+    border: none;
+}

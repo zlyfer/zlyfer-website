@@ -61,7 +61,7 @@ error_reporting(0);
 				<li><a class="waves-effect" href="./?page=home"><i class="material-icons">home</i>Home</a></li>
 				<li><a class="waves-effect" href="./?page=games"><i class="material-icons">insert_emoticon</i>Games</a></li>
 				<li><a class="waves-effect" href="./?page=visual-demonstrations"><i class="material-icons">filter_tilt_shift</i>Visual Demonstrations</a></li>
-				<li><a class="waves-effect" href="./?page=bbs2emden"><i class="material-icons">school</i>BBS II Emden</a></li>
+				<li><a class="waves-effect" href="./?page=bbs2-emden"><i class="material-icons">school</i>BBS II Emden</a></li>
 				<li><a class="waves-effect" href="./?page=miscellaneous"><i class="material-icons">bubble_chart</i>Miscellaneous</a></li>
 				<li>
 					<div class="divider"></div>

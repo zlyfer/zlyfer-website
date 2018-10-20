@@ -1,9 +1,27 @@
+# Miscellaneous
 231247221722447010617822617395106118131232120591.ico
 .idea/
+
+# Pages
 pages/games/*
 pages/bbs2-emden/*
 pages/miscellaneous/*
 pages/visual-demonstrations/*
+
+# Exclude Non GitHub-Pages
+!pages/games/gmod_ttt
+!pages/visual-demonstrations/dragndropbubbles
+!pages/visual-demonstrations/draw
+!pages/miscellaneous/converter
+!pages/miscellaneous/discord
+
+# Include Sensitive Pages
+pages/games/gmod_ttt/TTTDiscordZL.php
+pages/games/gmod_ttt/php/php.php
+pages/miscellaneous/discord
+pages/games/*
+
+# Exclude .gitkeep's
 !pages/games/.gitkeep
 !pages/bbs2-emden/.gitkeep
 !pages/miscellaneous/.gitkeep
