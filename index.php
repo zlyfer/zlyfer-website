@@ -25,7 +25,7 @@
 						<li class="<?php if ($active == "miscellaneous") {echo("active");}?> waves-effect"><a href="./?page=miscellaneous">Miscellaneous</a></li>
 					</ul>
 					<ul class="right hide-on-med-and-down">
-						<li><a class="<?php if ($active == "impressum") {echo("active");}?> waves-effect" href="./?page=impressum">Impressum</a></li>
+						<li class="<?php if ($active == "impressum") {echo("active");}?> waves-effect"><a href="./?page=impressum">Impressum</a></li>
 					</ul>
 					<a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
 					<span class="brand-logo center hide-on-large-only">Home</span>
