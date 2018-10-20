@@ -12,7 +12,7 @@ function genCards($name) {
 				$ghbtn = '<a class="disabled waves-effect waves-dark btn">GitHub</a>';
 			}
 			$card = '
-<div class="card hoverable">
+<div class="card">
 <div class="card-image">
 <img src="./images/'.$name.'/'.$pages[$i].'.png">
 </div>
