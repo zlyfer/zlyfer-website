@@ -5,7 +5,7 @@ error_reporting(0);
 		$html = '';
 		$pages = scandir('./pages/'.$name.'/');
 		for ($i=0; $i < count($pages); $i++) {
-			if ($pages[$i] != '.' && $pages[$i] != '..') {
+			if ($pages[$i] != '.' && $pages[$i] != '..' && $pages[$i] != '.gitkeep') {
 				$card = '<div class="col s12 m3">
 					<div class="card hoverable">
 						<div class="card-image">
