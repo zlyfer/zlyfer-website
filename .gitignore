@@ -1,9 +1,10 @@
 231247221722447010617822617395106118131232120591.ico
 .idea/
-pages/bbs2-emden/
 pages/games/*
+pages/bbs2-emden/*
 pages/miscellaneous/*
 pages/visual-demonstrations/*
 !pages/games/.gitkeep
+!pages/bbs2-emden/.gitkeep
 !pages/miscellaneous/.gitkeep
 !pages/visual-demonstrations/.gitkeep
