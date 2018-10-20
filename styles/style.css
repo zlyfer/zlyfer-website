@@ -31,3 +31,23 @@ main {
 .chip {
 	border-radius: 0px;
 }
+
+#slide-out {
+	width: 80%;
+}
+
+#slide-out li {
+	height: 64px;
+}
+
+#slide-out li a {
+	height: 64px;
+	line-height: 64px;
+	font-size: 18px;
+}
+
+#slide-out li a i {
+	height: 64px;
+	line-height: 64px;
+	font-size: 22px;
+}
