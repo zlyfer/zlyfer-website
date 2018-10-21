@@ -29,8 +29,8 @@
 					</ul>
 				</nav>
 			</div>
-						<div class="navbar-fixed hide-on-large-only red">
-					<nav id="mobile-nav" class="green">
+			<div class="navbar-fixed hide-on-large-only">
+				<nav id="mobile-nav" class="green">
 					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons waves-effect">menu</i></a>
 				</nav>
 			</div>
