@@ -16,20 +16,21 @@
 	<body class="">
 		<header>
 			<div class="navbar-fixed">
-				<nav class="green">
-					<ul class="left hide-on-med-and-down">
+				<nav class="green hide-on-med-and-down">
+					<ul class="left">
 						<li class="<?php if ($active == "home") {echo("active");}?> waves-effect"><a href="./?page=home">Home</a></li>
 						<li class="<?php if ($active == "games") {echo("active");}?> waves-effect"><a href="./?page=games">Games</a></li>
 						<li class="<?php if ($active == "visual-demonstrations") {echo("active");}?> waves-effect"><a href="./?page=visual-demonstrations">Visual Demonstrations</a></li>
 						<li class="<?php if ($active == "bbs2-emden") {echo("active");}?> waves-effect"><a href="./?page=bbs2-emden">BBS II Emden</a></li>
 						<li class="<?php if ($active == "miscellaneous") {echo("active");}?> waves-effect"><a href="./?page=miscellaneous">Miscellaneous</a></li>
 					</ul>
-					<ul class="right hide-on-med-and-down">
+					<ul class="right">
 						<li class="<?php if ($active == "impressum") {echo("active");}?> waves-effect"><a href="./?page=impressum">Impressum</a></li>
 					</ul>
-					<a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"><i class="material-icons">menu</i></a>
-					<span class="brand-logo center hide-on-large-only">Home</span>
-				</nav>
+				<!-- </nav>
+								<nav class="green hide-on-large-only">
+					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				</nav> -->
 			</div>
 			<ul id="slide-out" class="sidenav">
 				<li><a class="<?php if ($active == "home") {echo("grey lighten-1");}?> waves-effect" href="./?page=home"><i class="material-icons">home</i>Home</a></li>
