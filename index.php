@@ -28,10 +28,10 @@
 						<li class="<?php if ($active == "impressum") {echo("active");}?> waves-effect"><a href="./?page=impressum">Impressum</a></li>
 					</ul>
 				</nav>
+			</div>
 					<nav id="mobile-nav" class="green hide-on-large-only">
 					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons waves-effect">menu</i></a>
 				</nav>
-			</div>
 			<ul id="slide-out" class="sidenav">
 				<li><a class="<?php if ($active == "home") {echo("grey lighten-1");}?> waves-effect" href="./?page=home"><i class="material-icons">home</i>Home</a></li>
 				<li><a class="<?php if ($active == "games") {echo("grey lighten-1");}?> waves-effect" href="./?page=games"><i class="material-icons">insert_emoticon</i>Games</a></li>
