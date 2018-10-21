@@ -15,8 +15,8 @@
 
 	<body>
 		<header>
-			<div class="navbar-fixed">
-				<nav class="green hide-on-med-and-down">
+			<div class="navbar-fixed hide-on-med-and-down">
+				<nav class="green">
 					<ul class="left">
 						<li class="<?php if ($active == "home") {echo("active");}?> waves-effect"><a href="./?page=home">Home</a></li>
 						<li class="<?php if ($active == "games") {echo("active");}?> waves-effect"><a href="./?page=games">Games</a></li>
@@ -29,9 +29,11 @@
 					</ul>
 				</nav>
 			</div>
-					<nav id="mobile-nav" class="green hide-on-large-only">
+						<div class="navbar-fixed hide-on-large-only">
+					<nav id="mobile-nav" class="green">
 					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons waves-effect">menu</i></a>
 				</nav>
+			</div>
 			<ul id="slide-out" class="sidenav">
 				<li><a class="<?php if ($active == "home") {echo("grey lighten-1");}?> waves-effect" href="./?page=home"><i class="material-icons">home</i>Home</a></li>
 				<li><a class="<?php if ($active == "games") {echo("grey lighten-1");}?> waves-effect" href="./?page=games"><i class="material-icons">insert_emoticon</i>Games</a></li>
