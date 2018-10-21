@@ -33,10 +33,6 @@ main {
 	border-radius: 0px;
 }
 
-.parallax-container {
-	height: calc(100% - 64px);
-}
-
 #slide-out {
 	width: 80%;
 }
@@ -55,4 +51,15 @@ main {
 	height: 128px;
 	line-height: 128px;
 	font-size: 44px;
+}
+
+#mobile-nav {
+	height: 10%;
+	line-height: 10%;
+}
+
+#mobile-nav i {
+	height: 10vh;
+	line-height: 10vh;
+	font-size: 7vh;
 }

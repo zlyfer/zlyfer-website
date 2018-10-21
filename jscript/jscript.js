@@ -23,9 +23,7 @@ function getCookie(cname) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	M.Parallax.init(document.querySelectorAll('.parallax'), {
-		responsiveThreshold: 964
-	});
+	M.Parallax.init(document.querySelectorAll('.parallax'), {});
 	M.Sidenav.init(document.querySelectorAll('.sidenav'), {});
 	if (getCookie("cookie") == "") {
 		M.toast({

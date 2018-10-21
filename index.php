@@ -13,7 +13,7 @@
 		<script type="text/javascript" src="./jscript/jscript.js"></script>
 	</head>
 
-	<body class="">
+	<body>
 		<header>
 			<div class="navbar-fixed">
 				<nav class="green hide-on-med-and-down">
@@ -27,10 +27,10 @@
 					<ul class="right">
 						<li class="<?php if ($active == "impressum") {echo("active");}?> waves-effect"><a href="./?page=impressum">Impressum</a></li>
 					</ul>
-				<!-- </nav>
-								<nav class="green hide-on-large-only">
-					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-				</nav> -->
+				</nav>
+					<nav id="mobile-nav" class="green hide-on-large-only">
+					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons waves-effect">menu</i></a>
+				</nav>
 			</div>
 			<ul id="slide-out" class="sidenav">
 				<li><a class="<?php if ($active == "home") {echo("grey lighten-1");}?> waves-effect" href="./?page=home"><i class="material-icons">home</i>Home</a></li>
