@@ -3,7 +3,7 @@ error_reporting(0);
 
 function genCards($name) {
 	$html = '
-	<h3 id="site-title" class="center">'.$name.'</h3>
+	<h3 id="site-title" class="center">'.strtoupper($name).'</h3>
 	';
 	$sites = scandir('./sites/'.$name.'/');
 	for ($i=0; $i < count($sites); $i++) {
