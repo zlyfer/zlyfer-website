@@ -8,21 +8,21 @@ main {
 	flex: 1 0 auto;
 }
 
-/* *::-webkit-scrollbar-track {
-	background-color: #f5f5f5;
+body::-webkit-scrollbar {
+	display: none;
+	/* width: 17px; */
 }
+
+*::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
 *::-webkit-scrollbar-thumb {
 	background-color: #388e3c;
 }
+
 *::-webkit-scrollbar-thumb:hover {
 	background-color: #2e7d32;
-}
-*::-webkit-scrollbar-thumb:active {
-	background-color: #1b5e20;
-} */
-*::-webkit-scrollbar {
-	/* width: 15px; */
-	display: none;
 }
 
 .chip {
@@ -58,4 +58,36 @@ main {
 	height: 10vh;
 	line-height: 10vh;
 	font-size: 7vh;
+}
+
+nav#navbar {
+	height: 50px;
+}
+
+nav#navbar ul li {
+	height: 50px;
+	line-height: 50px;
+}
+
+.parallax-container#home {
+	height: calc(100% - 50px);
+	top: -14px;
+}
+
+.parallax-container.sites {
+	height: 40%;
+	top: -14px;
+}
+
+.card.sites {
+	top: -14px;
+	margin-top: 0;
+}
+
+.card-name {
+	font-weight: bold;
+}
+
+#site-title {
+	margin-bottom: 2rem;
 }
