@@ -46,7 +46,10 @@ function genMain() {
 	array_splice($sites,0,2);
 	array_splice($pages,0,2);
 
-	if (in_array($site, $sites)) {
+	if (!isset($site) && !isset($page)) {
+		include('./pages/home.php');
+	}
+	else if (in_array($site, $sites)) {
 		genCards($site);
 	} else if (in_array($page.'.php', $pages)) {
 		include('./pages/'.$page.'.php');

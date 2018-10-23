@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
 }
 
 #slide-out {
-	width: 80%;
+	width: 70%;
 }
 
 #slide-out li {
@@ -50,14 +50,14 @@ body::-webkit-scrollbar {
 }
 
 #mobile-nav {
-	height: 10%;
-	line-height: 10%;
+	height: 80px;
+	line-height: 80px;
 }
 
 #mobile-nav i {
-	height: 10vh;
-	line-height: 10vh;
-	font-size: 7vh;
+	font-size: 60px;
+	height: 80px;
+	line-height: 80px;
 }
 
 nav#navbar {
