@@ -27,5 +27,5 @@ sites/games/*
 !sites/miscellaneous/.gitkeep
 !sites/visual-demonstrations/.gitkeep
 
-# Include Sensitive Files
-resources/hs-fulda/credentials.json
+# Include Generated Files
+resources/hs-fulda/ai1001-lerntagebuch.html

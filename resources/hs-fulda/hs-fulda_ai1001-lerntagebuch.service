@@ -1,0 +1,12 @@
+[Unit]
+Description=HS Fulda AI1001 Lerntagebuch Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /var/www/html/zlyfer-website/resources/hs-fulda/ai1001-lerntagebuch.py
+Restart=always
+RestartSec=3600
+
+[Install]
+WantedBy=multi-user.target
