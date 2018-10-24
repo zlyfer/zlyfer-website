@@ -1,0 +1,168 @@
+:root {
+	--light-theme-color: #2D2E2E;
+	--light-shadow-color: #3E3F3F;
+	--dark-theme-color: #1D1F21;
+	--accent-color: #3D5F96;
+	--light-accent-color: #a4d6fc;
+	--light-text-color: #c5c5c5;
+	--dark-text-color: #757575;
+}
+
+*::selection {
+	background-color: var(--light-text-color);
+	color: var(--dark-theme-color);
+}
+
+html {
+	background-color: var(--dark-theme-color);
+}
+
+.doc {
+	max-width: 100%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+}
+
+input, select {
+	background-color: var(--light-theme-color);
+	border: 3px solid var(--light-theme-color);
+	color: var(--light-text-color);
+	outline: none;
+	height: 5vh;
+	font-size: 2vh;
+	padding-left: 1%;
+	padding-right: 1%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+
+input[type=button]:active, input.text#output:active {
+	transform: scale(0.95);
+}
+
+input.text#input {
+	margin-top: 0.5vh;
+	margin-left: 0.5%;
+}
+
+input.text:not(#value) {
+	width: 99%;
+	cursor: text;
+	margin-top: 0.5%;
+	margin-bottom: 1%;
+	font-family: monospace;
+}
+
+input.text#output {
+	margin-left: 0.5%;
+	width: 77%;
+	cursor: pointer;
+}
+
+input.text#output::placeholder {
+	color: var(--light-text-color);
+}
+
+input.text:not(#output):focus, input.text:hover {
+	border: 3px solid var(--accent-color);
+}
+
+input.button {
+	width: 23.5%;
+	margin-bottom: 1%;
+}
+
+input.button.cat {
+	width: 10.6%;
+	margin-top: 0.5vh;
+}
+
+input.button.vs {
+	width: 49%;
+}
+
+input.button.vs:not(.first) {
+	margin-left: 2%;
+}
+
+input.button#copy {
+	width: 20%;
+	margin-left: 2%;
+}
+
+input.button.cat:not(.first) {
+	margin-left: 0.57%;
+}
+
+input.button#clear, input.button#add {
+	margin-left: 2%;
+}
+
+input.button:disabled {
+	color: var(--light-text-color);
+}
+
+input.button:disabled {
+	color: var(--dark-text-color);
+}
+
+input.button:not(:disabled):hover {
+	cursor: pointer;
+	color: var(--light-text-color);
+	border: 3px solid var(--accent-color);
+}
+
+input.button.on {
+	background-color: var(--accent-color);
+	border: 3px solid var(--accent-color);
+}
+
+input.button.off {
+	border: 3px solid var(--light-theme-color);
+	background-color: var(--light-theme-color);
+	color: var(--dark-text-color);
+}
+
+input.button.on:hover:not(.vs) {
+	border: 3px solid var(--light-theme-color);
+}
+
+select {
+	cursor: pointer;
+	width: 23.5%;
+}
+
+input.text#value {
+	width: 23.5%;
+	margin-left: 2%;
+}
+
+img.mainLogo {
+	position: fixed;
+	width: 5vh;
+	height: 5vh;
+	left: 0.8%;
+	opacity: 0.8;
+	cursor: pointer;
+	-webkit-transition: opacity 0.4s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 0.4s ease;
+	transition: opacity 0.4s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 0.4s ease;
+	transition: opacity 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+	transition: opacity 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 0.4s ease;
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+img.mainLogo:hover {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+img.mainLogo#mainLogoVPlan {
+	bottom: 1%;
+	border: 1px solid var(--light-accent-color);
+	-webkit-box-shadow: 1px 1px 10px 1px var(--light-accent-color);
+	box-shadow: 1px 1px 10px 1px var(--light-accent-color);
+}

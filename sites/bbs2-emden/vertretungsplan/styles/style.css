@@ -1,0 +1,811 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,700,500italic,900,700italic,900italic);
+/*
+    transition:
+    -o-transition:
+    -moz-transition:
+    -webkit-transition:
+*/
+
+/*Variables*/
+
+:root {
+  --accent-color: hsl(215, 90%, 60%);
+  --light-accent-color: hsl(215, 90%, 65%);
+  --dark-accent-color: hsl(215, 90%, 55%);
+  --background-color: #ffffff;
+  --counter-background-color: #000000;
+  --table-light-row-color: #f5f5f5;
+  --table-dark-row-color: #e5e5e5;
+  --slider-thumb-width: 3%;
+  --hue-rotate: 215deg;
+  --brightness: 1000%;
+}
+
+*::-moz-selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+*::-moz-selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+*::selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+/*Tags*/
+
+body {
+  background-color: var(--background-color);
+}
+
+/*Classes*/
+
+/*IDs*/
+
+/*Hybrids*/
+
+div#navigationPanel:hover div#navigationList {
+  -webkit-box-shadow: -5px 0 20px 0 var(--counter-background-color);
+  box-shadow: -5px 0 20px 0 var(--counter-background-color);
+}
+
+div#navigationPanel {
+  position: absolute;
+  height: 100%;
+  width: 5%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  background-color: var(--background-color);
+  -webkit-transition: background-color 0.3s ease, width 0.3s ease 2s, opacity 0.3s ease, -webkit-box-shadow 0.5s;
+  transition: background-color 0.3s ease, width 0.3s ease, opacity 0.3s ease, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, background-color 0.3s ease, width 0.3s ease, opacity 0.3s ease;
+  transition: box-shadow 0.5s, background-color 0.3s ease, width 0.3s ease, opacity 0.3s ease, -webkit-box-shadow 0.5s;
+}
+
+div#navigationPanel:hover~.maincard {
+  width: 75%;
+}
+
+div#navigationPanel:hover {
+  width: 25%;
+  opacity: 1;
+}
+
+div#navigationList {
+  margin-top: 30vh;
+  border-top: 1px solid var(--background-color);
+  -webkit-box-shadow: -3px 0 7px 0 var(--counter-background-color);
+  box-shadow: -3px 0 7px 0 var(--counter-background-color);
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.5s;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, background-color 0.3s ease;
+  transition: box-shadow 0.5s, background-color 0.3s ease, -webkit-box-shadow 0.5s;
+}
+
+div.navigationEntry {
+  border-bottom: 1px solid var(--background-color);
+  height: 7vh;
+  cursor: pointer;
+}
+
+div.navigationEntry:hover img.navigationListImg {
+  visibility: visible;
+}
+
+div.navigationEntry span {
+  color: var(--accent-color);
+  margin-left: 12%;
+  font-size: 4vh;
+  line-height: 7vh;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+div.navigationEntry:hover, div.navigationEntry.selected {
+  background-color: var(--accent-color);
+}
+
+div.navigationEntry:hover span, div.navigationEntry.selected span {
+  color: var(--background-color);
+}
+
+img.navigationListImg {
+  width: 10%;
+  position: absolute;
+  margin-top: 2%;
+  left: 1%;
+  -webkit-filter: saturate(0) brightness(var(--brightness));
+  filter: saturate(0) brightness(var(--brightness));
+  visibility: hidden;
+}
+
+img.navigationListImg:hover {
+  -webkit-filter: hue-rotate(var(--hue-rotate)) brightness(120%);
+  filter: hue-rotate(var(--hue-rotate)) brightness(120%);
+}
+
+div.maincard {
+  display: none;
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  color: var(--dark-accent-color);
+  background-color: var(--background-color);
+  -webkit-box-shadow: -1px 0 20px 1px var(--counter-background-color);
+  box-shadow: -1px 0 20px 1px var(--counter-background-color);
+  -webkit-transition: top 0.3s ease, right 0.15s ease, color 0.3s ease, width 0.3s ease, background-color 0.3s ease, -webkit-box-shadow 0.5s, -webkit-transform 0.3s ease;
+  transition: top 0.3s ease, right 0.15s ease, color 0.3s ease, width 0.3s ease, background-color 0.3s ease, -webkit-box-shadow 0.5s, -webkit-transform 0.3s ease;
+  transition: box-shadow 0.5s, transform 0.3s ease, top 0.3s ease, right 0.15s ease, color 0.3s ease, width 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.5s, transform 0.3s ease, top 0.3s ease, right 0.15s ease, color 0.3s ease, width 0.3s ease, background-color 0.3s ease, -webkit-box-shadow 0.5s, -webkit-transform 0.3s ease;
+}
+
+div.maincard#vertretungsplan table {
+  width: 100%;
+  text-align: center;
+  word-break: break-all;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--background-color);
+  line-height: 5vh;
+}
+
+div.maincard#vertretungsplan tr#header th:hover {
+  background-color: var(--light-accent-color);
+  color: var(--background-color);
+  cursor: pointer;
+}
+
+div.maincard#vertretungsplan tr {
+  color: var(--accent-color);
+  font-family: Roboto;
+  max-width: 10%;
+  font-size: 64x;
+  margin-left: 5%;
+  margin-right: 5%;
+  word-wrap: break-word;
+}
+//zlytest
+
+div.maincard#vertretungsplan tr.odd {
+  background-color: var(--table-light-row-color);
+}
+
+div.maincard#vertretungsplan tr.even {
+  background-color: var(--table-dark-row-color);
+}
+
+div.maincard#vertretungsplan tr.even:hover, div.maincard#vertretungsplan tr.odd:hover {
+  background-color: var(--light-accent-color);
+  color: var(--background-color);
+  cursor: pointer;
+}
+
+div.maincard#vertretungsplan tr.even:hover td, div.maincard#vertretungsplan tr.odd:hover td {
+  border-color: var(--background-color);
+}
+
+div.maincard#vertretungsplan td:not(.kurs), th:not(.kurs) {
+  border-color: var(--accent-color);
+  border-left: 1px solid;
+}
+
+div.maincard#vertretungsplan td.different {
+  border-color: var(--accent-color);
+  border-top: 1px solid;
+}
+
+div.maincard#vertretungsplan td {
+  font-size: 1.2rem;
+}
+
+div.maincard#vertretungsplan th.date {
+  background-color: var(--light-accent-color);
+  color: var(--background-color);
+  border-color: var(--light-accent-color);
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-thumb:window-inactive {
+  background-color: var(--background-color);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--light-accent-color);
+}
+
+*::-webkit-scrollbar-thumb:window-inactive:hover {
+  background-color: var(--background-color);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dark-accent-color);
+}
+
+div.maincard:not(#impressum) hr {
+  margin-top: 3%;
+}
+
+h1 {
+  text-align: center;
+  line-height: normal;
+}
+
+div.maincard h2:not(.checkbox_radio_text):not(.information_card h2) {
+  padding-left: 1%;
+  line-height: 0.5;
+}
+
+div.maincard#account h2:not(.checkbox_radio_text) {
+  line-height: 1;
+  padding-left: 1%;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+h3 {
+  padding-left: 1%;
+  font-family: monospace;
+  line-height: normal;
+}
+
+/* div.maincard#impressum h1 {
+  font-size: normal;
+}
+div.maincard#impressum h2 {
+  padding-left: 1%;
+  font-size: 25px;
+}
+
+div.maincard#impressum span {
+  font-size: 25px;
+  right: 1%;
+  position: absolute;
+} */
+
+div.maincard#impressum th {
+  border: none;
+  color: var(--accent-color);
+  width: 100vw;
+  font-size: 30px;
+}
+div.maincard#impressum th:not(#impressum_right) {
+  text-align: left;
+}
+div.maincard#impressum th#impressum_right {
+  text-align: right;
+}
+
+div.maincard span.right {
+  position: absolute;
+  right: 6.5%;
+}
+
+div.maincard span.italic {
+  font-style: italic;
+}
+
+div.maincard span.underline {
+  text-decoration: underline;
+}
+
+a {
+  line-height: 0.5;
+  text-decoration: none;
+  color: var(--dark-accent-color);
+}
+
+a:visited {
+  color: var(--dark-accent-color);
+}
+
+#impressum a {
+  text-decoration: underline;
+  color: var(--light-accent-color);
+}
+
+#impressum a:hover {
+  color: var(--dark-accent-color);
+}
+
+input {
+  height: 55px;
+  width: 98%;
+  color: var(--accent-color);
+  background-color: var(--background-color);
+  margin-left: 1%;
+  margin-bottom: 10px;
+  border: 1px solid var(--accent-color);
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: normal;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input:not([type=text]):not([type=range]):hover {
+  -webkit-transform: scale(0.995);
+  transform: scale(0.995);
+}
+
+input:not([type=range]) {
+  padding: 1%;
+}
+
+textarea {
+  padding: 1%;
+  font-weight: bold;
+  cursor: edit;
+  margin-left: 1%;
+  font-family: Roboto;
+  font-size: 15px;
+  margin-bottom: 10px;
+  width: 98%;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  outline: none;
+  resize: vertical;
+  line-height: normal;
+}
+
+div.maincard#feedback textarea {
+  height: 30%;
+  background-color: var(--background-color);
+}
+
+textarea::-webkit-input-placeholder {
+  color: var(--light-accent-color);
+}
+
+textarea:-ms-input-placeholder {
+  color: var(--light-accent-color);
+}
+
+textarea::-ms-input-placeholder {
+  color: var(--light-accent-color);
+}
+
+textarea::placeholder {
+  color: var(--light-accent-color);
+}
+
+input:not([type=password]):not([type=text]):not([type=checkbox]):not([type=radio]) {
+  -webkit-transition: background-color 0.5s ease, color 1s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.5s ease, color 1s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.5s ease, color 1s ease;
+  transition: transform 0.2s ease, background-color 0.5s ease, color 1s ease, -webkit-transform 0.2s ease;
+}
+
+input:not([type=password]):not([type=text]):not([type=checkbox]):not([type=range]):not([type=textbox]):not([type=radio]):active {
+  -webkit-transform: scale(0.99);
+  transform: scale(0.99);
+}
+
+input[type=password]:not(.forbidden), input[type=text]:not(.forbidden) {
+  cursor: text;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--light-accent-color);
+}
+
+input:-ms-input-placeholder {
+  color: var(--light-accent-color);
+}
+
+input::-ms-input-placeholder {
+  color: var(--light-accent-color);
+}
+
+input::placeholder {
+  color: var(--light-accent-color);
+}
+
+input:hover:not([type=checkbox]), input:hover::-webkit-input-placeholder, input[type=submit], input[type=button] {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+input:hover:not([type=checkbox]), input:hover:-ms-input-placeholder, input[type=submit], input[type=button] {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+input:hover:not([type=checkbox]), input:hover::-ms-input-placeholder, input[type=submit], input[type=button] {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+input:hover:not([type=checkbox]), input:hover::placeholder, input[type=submit], input[type=button] {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+input:focus {
+  outline: none;
+}
+
+input#colorChanger {
+  background-color: var(--background-color);
+  background: -webkit-linear-gradient(-180deg, hsl(315, 90%, 45%), hsl(270, 90%, 45%), hsl(225, 90%, 45%), hsl(180, 90%, 45%), hsl(135, 90%, 45%), hsl(90, 90%, 45%), hsl(45, 90%, 45%), hsl(0, 90%, 45%));
+  border: none;
+}
+
+input#bColorChanger {
+  background-color: var(--background-color);
+  background: -webkit-linear-gradient(-180deg, hsl(0, 0%, 100%), hsl(0, 0%, 0%));
+  border: none;
+}
+
+input#colorChanger::-webkit-slider-thumb, input#bColorChanger::-webkit-slider-thumb {
+  height: 55px;
+  width: 30px;
+  background: var(--counter-background-color);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input#colorChanger::-moz-range-track {
+  background: -webkit-linear-gradient(-180deg, hsl(315, 90%, 45%), hsl(270, 90%, 45%), hsl(225, 90%, 45%), hsl(180, 90%, 45%), hsl(135, 90%, 45%), hsl(90, 90%, 45%), hsl(45, 90%, 45%), hsl(0, 90%, 45%));
+}
+input#bColorChanger::-moz-range-track {
+  background: -webkit-linear-gradient(-180deg, hsl(0, 0%, 100%), hsl(0, 0%, 0%));
+}
+input#colorChanger::-moz-range-thumb, input#bColorChanger::-moz-range-thumb {
+  border-radius: 0px;
+  height: 55px;
+  width: 30px;
+  background: var(--counter-background-color);
+  border: none;
+}
+
+input[type=checkbox], input[type=radio] {
+  width: 55px;
+  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.1s ease;
+  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.1s ease;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease, transform 0.1s ease;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease, transform 0.1s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.1s ease;
+}
+
+input[type=checkbox]:hover, input[type=radio]:hover {
+  background-color: var(--background-color);
+  -webkit-box-shadow: inset 0 0 0 2px var(--light-accent-color);
+  box-shadow: inset 0 0 0 2px var(--light-accent-color);
+}
+
+input[type=checkbox]:checked, input[type=radio]:checked {
+  background-color: var(--dark-accent-color);
+  -webkit-box-shadow: inset 0 0 0 4px var(--background-color);
+  box-shadow: inset 0 0 0 4px var(--background-color);
+}
+
+input[type=checkbox]:active, input[type=radio]:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+input[type=checkbox]:checked:hover, input[type=radio]:checked:hover {
+  background-color: var(--dark-accent-color);
+  -webkit-box-shadow: inset 0 0 0 2px var(--background-color);
+  box-shadow: inset 0 0 0 2px var(--background-color);
+}
+
+input[type=radio] {
+  border-radius: 90%;
+}
+
+input[type=range] {
+  cursor: ew-resize;
+}
+
+.hidden {
+  display: none;
+}
+
+div.maincard:not(#impressum):not(#account) h2 {
+  text-align: center;
+  /* font-size: 30px; */
+}
+div.maincard:not(#impressum):not(#account):not(#einstellungen) h2 {
+  font-size: 20px;
+}
+
+.information_card h1 {
+  line-height: normal;
+  padding-top: 0;
+}
+
+.information_card h2 {
+  padding-top: 0;
+  line-height: 1.2;
+}
+
+.information_card#information_card_first {
+  margin-top: 3%;
+}
+
+.information_card {
+  display: inline-block;
+  padding: 1%;
+  width: 96%;
+  margin-left: 1%;
+  margin-bottom: 2vh;
+  background-color: var(--background-color);
+  border: 1px solid var(--accent-color);
+  word-break: normal;
+}
+
+.information_card.hover:hover {
+  background-color: var(--light-accent-color);
+  color: var(--background-color);
+}
+
+.forbidden {
+  cursor: not-allowed;
+}
+
+.small {
+  font-size: 25px;
+}
+
+.big {
+  font-size: 30px;
+}
+
+div#user_account_badge {
+  width: 98%;
+  overflow: auto;
+  border: 1px solid var(--accent-color);
+  margin-left: 1%;
+}
+
+div.maincard_slice {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 98%;
+  overflow: auto;
+  border: 1px solid var(--accent-color);
+  margin-left: 1%;
+  padding-bottom: 1%;
+}
+
+div#user_account_badge h1 {
+  margin-left: 1%;
+  position: absolute;
+}
+
+div#user_account_badge #user_icon {
+  float: right;
+  width: 128px;
+  height: 128px;
+  cursor: pointer;
+}
+
+div#user_account_badge #user_icon:hover {
+  -webkit-filter: brightness(170%);
+  filter: brightness(170%);
+}
+
+#profile_pic_upload>input {
+  display: none;
+}
+
+#forgot_password h2, #forgot_password_confirm h2, h2.error {
+  text-align: center;
+}
+
+div.statisticBarJacket {
+  width: 100%;
+  height: 50px;
+  background-color: var(--light-accent-color);
+}
+
+div.statisticBar {
+  width: 0%;
+  height: 50px;
+  background-color: var(--dark-accent-color);
+  -webkit-transition: width 2s ease 1s;
+  transition: width 2s ease 1s;
+  margin-top: -1px;
+}
+
+div.statisticBarIndicator {
+  width: 1px;
+  height: 50px;
+  opacity: 0.5;
+  margin-top: -50px;
+  position: absolute;
+  background-color: var(--counter-background-color);
+}
+
+div.statisticBarIndicator25 {
+  margin-left: 25%;
+}
+
+div.statisticBarIndicator50 {
+  margin-left: 50%;
+}
+
+div.statisticBarIndicator75 {
+  margin-left: 75%;
+}
+
+div.statisticBar p {
+  color: var(--background-color);
+  position: absolute;
+  font-size: 18px;
+  line-height: 16px;
+  z-index: 101;
+}
+
+div.statisticBar p.name {
+  margin-left: 1.5%;
+}
+
+div.statisticBar p.percent {
+  margin-left: 49%;
+}
+
+/* div#fullscreenBtn {
+  height: 40px;
+  width: 40px;
+  background-color: var(--accent-color);
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1001;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: width 0.2s ease, height 0.2s ease;
+  transition: width 0.2s ease, height 0.2s ease;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 2px var(--counter-background-color);
+  box-shadow: 0px 0px 5px 2px var(--counter-background-color);
+}
+
+div#fullscreenBtn img#fullscreenImg {
+  height: 80%;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+div#fullscreenBtn:hover {
+  opacity: 1;
+  height: 50px;
+  width: 50px;
+} */
+
+h2.checkbox_radio_text {
+  padding-left: 1%;
+  margin-bottom: 10px;
+  margin-top: 0;
+  margin-right: 5%;
+  float: right;
+  line-height: 2;
+}
+
+div.maincard:not(#einstellungen).maincard_slice h2.checkbox_radio_text {
+  line-height: 3;
+}
+
+img.mainLogo {
+  position: fixed;
+  width: 5vh;
+  height: 5vh;
+  left: 0.8%;
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 0.4s ease;
+  transition: opacity 0.4s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 0.4s ease;
+  transition: opacity 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 0.4s ease;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+img.mainLogo:hover {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* img.mainLogo#mainLogoZlyfer { */
+  /* bottom: 1%; */
+  /* border: 1px solid #43A047; */
+  /* -webkit-box-shadow: 1px 1px 10px 1px #43A047; */
+  /* box-shadow: 1px 1px 10px 1px #43A047; */
+/* } */
+img.mainLogo#mainLogoVPlan {
+  bottom: 1%;
+  border: 1px solid var(--light-accent-color);
+  -webkit-box-shadow: 1px 1px 10px 1px var(--light-accent-color);
+  box-shadow: 1px 1px 10px 1px var(--light-accent-color);
+}
+
+#stundenplan_container_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 2vh;
+}
+
+#stundenplan_fach_container_available {
+  padding-top: 1vh;
+  width: 45%;
+  margin-left: 2%;
+  height: auto;
+  border: 1px solid var(--accent-color);
+}
+
+#stundenplan_fach_container_enabled {
+  padding-top: 1vh;
+  width: 45%;
+  margin-left: 5%;
+  height: auto;
+  border: 1px solid var(--accent-color);
+}
+
+#stundenplan_fach_container_available h2, #stundenplan_fach_container_enabled h2 {
+  text-align: center;
+}
+
+div.stundenplan_fach {
+  width: 100%;
+  height: 13%;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
+div.stundenplan_fach:hover {
+  border-color: var(--background-color);
+}
+
+th.stundenplan_fach {
+  color: var(--background-color);
+  border: none;
+  font-size: 3.5vh;
+  line-height: 2.5vh;
+}
+
+th.stundenplan_fach_value {
+  text-align: center;
+  width: 10%;
+  padding-top: 1.7%;
+}
+
+input.stundenplan_suche {
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 5%;
+  border-left: none;
+  border-right: none;
+}
+
+input[type=button]#logout_button {
+  margin-top: 1%;
+}
+input[type=button]#save_stundenplan {
+    display: none;
+}
+
+div.maincard#account table tbody tr th {
+  font-size: 20px;
+}

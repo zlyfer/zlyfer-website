@@ -2,13 +2,12 @@
 231247221722447010617822617395106118131232120591.ico
 .idea/
 
-# Sites
+# GitHub-Sites
 sites/games/*
-sites/bbs2-emden/*
 sites/miscellaneous/*
 sites/visual-demonstrations/*
 
-# Exclude Non GitHub-Sites
+# Exclude Non GitHub-Pages
 !sites/games/gmod_ttt
 !sites/visual-demonstrations/dragndropbubbles
 !sites/visual-demonstrations/draw
@@ -16,16 +15,12 @@ sites/visual-demonstrations/*
 !sites/miscellaneous/discord
 
 # Include Sensitive Sites
-sites/games/gmod_ttt/TTTDiscordZL.php
-sites/games/gmod_ttt/php/php.php
-sites/miscellaneous/discord
-sites/games/*
 
 # Exclude .gitkeep's
 !sites/games/.gitkeep
-!sites/bbs2-emden/.gitkeep
 !sites/miscellaneous/.gitkeep
 !sites/visual-demonstrations/.gitkeep
 
 # Include Generated Files
 resources/hs-fulda/ai1001-lerntagebuch.html
+sites/bbs2-emden/vertretungsplan/uploads/

@@ -1,0 +1,135 @@
+:root {
+    --accent-color: #3D8AF5;
+    --light-accent-color: #5598F6;
+    --dark-accent-color: #257BF4;
+}
+* {
+    font-family: monospace;
+    background-color: beige;
+    color: #C73838;
+}
+.infotext:not(#message)::before {
+    content: "> ";
+    color: #C73838;
+}
+.infotext#mesasge::after {
+	content: " <<";
+    color: #C73838;
+}
+#files::before {
+    content: "File ";
+}
+#totalfiles::before {
+    content: "of ";
+}
+#percentfiles::after {
+    content: "%";
+}
+
+.infotext {
+    font-size: 35;
+    font-weight: 800;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 1%;
+}
+.infotext:not(#servername):not(#collection) {
+	max-width: 65%;
+}
+.infotext2 {
+    color: #A8A886;
+}
+.infotext2 span.red {
+    color: #C73838;
+}
+
+#message {
+    white-space: nowrap;
+    font-size: 20;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 50%;
+	max-width: 30%;
+    text-align: right;
+    background-color: transparent;
+}
+
+img#clientavatar {
+    height: 200px;
+    width: 200px;
+	position: absolute;
+    top: 0;
+    right: 5%;
+    -webkit-box-shadow: 0px 0px 35px black;
+    border: 1px solid white;
+    -webkit-transition: border-top-left-radius 3s ease 1.9s, border-top-right-radius 2.55s ease 2.15s, border-bottom-right-radius 2.5s ease 2.4s, border-bottom-left-radius 2.25s ease 2.65s, width 0.3s ease-in-out, height 0.3s ease-in-out, top 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+
+#progressbar {
+    position: absolute;
+    height: 64px;
+    width: 90%;
+    background-color: #A8A886;
+    bottom: 15%;
+    left: 5%;
+    z-index: 100;
+}
+#filled {
+    height: 64px;
+    width: 0%;
+    background-color: #C73838;
+    transition: width 2s ease;
+    -webkit-transition: width 2s ease;
+}
+#filled:after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+/*
+    background-image: -webkit-linear-gradient(
+        -45deg, 
+        rgba(255, 255, 255, .2) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, .2) 50%, 
+        rgba(255, 255, 255, .2) 75%, 
+        transparent 75%,
+        transparent
+    );
+*/
+    background-size: 40px 40px;
+    width: inherit;
+    overflow: hidden;
+/*    -webkit-animation: move 2s linear infinite;*/
+}
+/*
+@-webkit-keyframes move {
+    0% { background-position: 0px 0; }
+    100% { background-position: 40px 0px; }
+}
+*/
+
+.progressbartext {
+    line-height: 0px;
+    position: absolute;
+    color: beige;
+    font-weight: 500;
+    background-color: transparent;
+    display: inline;
+    font-size: 32;
+}
+#totalfiles {
+    right: 1%;
+}
+#percentfiles {
+    margin-left: 48%;
+}
+#files {
+    margin-left: 1%;
+}
+
+#message {
+    position: absolute;
+    top: 250px;
+    right: 5%;
+}
