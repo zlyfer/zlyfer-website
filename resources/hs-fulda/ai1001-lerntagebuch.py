@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 os.chdir("home/zlyfer/zlyfer-website/resources/hs-fulda/")
 logging.basicConfig(format="\n%(levelname)s: @'%(asctime)s' in '%(name)s':\n> %(message)s", level=logging.INFO)
 
-credentials = json.loads(codecs.open('/home/zlyfer/tokens/credentials.json', 'r', 'utf-8').read())
+credentials = json.loads(codecs.open('/home/zlyfer/tokens/hs-fulda_credentials.json', 'r', 'utf-8').read())
 url1 = 'https://elearning.hs-fulda.de/ai/login/index.php'
 url2 = 'https://elearning.hs-fulda.de/ai/mod/journal/edit.php?id=20748'
 
