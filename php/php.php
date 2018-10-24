@@ -39,22 +39,28 @@ if (isset($_GET["page"])) {
 }
 
 function genMain() {
-	$sites = scandir('./sites');
-	$site = $_GET["site"];
-	$pages = scandir('./pages');
-	$page = $_GET["page"];
-	array_splice($sites,0,2);
-	array_splice($pages,0,2);
-
-	if (!isset($site) && !isset($page)) {
-		include('./pages/home.php');
-	}
-	else if (in_array($site, $sites)) {
-		genCards($site);
-	} else if (in_array($page.'.php', $pages)) {
-		include('./pages/'.$page.'.php');
+	if (isset($_GET["site"])) {
+		$site = $_GET["site"];
+		$sites = scandir('./sites');
+		$site = $_GET["site"];
+		array_splice($sites,0,2);
+		if (in_array($site, $sites)) {
+			genCards($site);
+		} else {
+			include('./pages/404.php');
+		}
+	} else if (isset($_GET["page"])) {
+		$page = $_GET["page"];
+		$pages = scandir('./pages');
+		$page = $_GET["page"];
+		array_splice($pages,0,2);
+		if (in_array($page.'.php', $pages)) {
+			include('./pages/'.$page.'.php');
+		} else {
+			include('./pages/404.php');
+		}
 	} else {
-		include('./pages/404.php');
+				include('./pages/home.php');
 	}
 }
 ?>
