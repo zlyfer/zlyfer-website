@@ -51,14 +51,17 @@ function setai1001lerntagebuchtime() {
 		let nm = parseInt(nexttime.slice(0, 2));
 		let ns = parseInt(nexttime.slice(3, 5));
 
+		if (nm == 0 && ns == 0) {
+			location.reload();
+		}
+
 		let m = nm;
 		let s = ns - 1;
-		if (s < 0 && m != 0) {
-			m -= 1;
+		if (s < 0 && m == 0) {
+			s = 0;
+		} else if (s < 0 && m != 0) {
 			s = 59;
-		}
-		if (m < 0) {
-			m = 0;
+			m -= 1;
 		}
 		if (s < 10) {
 			s = `0${s.toString()}`;

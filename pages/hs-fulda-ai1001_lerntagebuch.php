@@ -38,7 +38,6 @@ if ($ds < 10) {
 		<div class="card-content">
 			<strong class="left">Letzte Aktualisierung: <span id="last_time"><?php echo($lh.":".$lm.":".$ls); ?></span></strong>
 			<strong class="right">Nächste Aktualisierung: <span id="next_time"><?php echo($dm.":".$ds); ?></span></strong>
-		<h4>Journal</h4>
 			<?php echo(file_get_contents('./resources/hs-fulda/ai1001-lerntagebuch.html'))?>
 		</div>
 	</div>
