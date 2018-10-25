@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 		setCookie("cookie", "true", "365");
 	}
-	// setai1001lerntagebuchtime();
+	setInterval(() => {
+		setai1001lerntagebuchtime();
+	}, 1000);
 });
 
 // https://www.w3schools.com/js/js_cookies.asp
@@ -42,73 +44,33 @@ function getCookie(cname) {
 }
 
 function setai1001lerntagebuchtime() {
-	let span = document.getElementById('stringtime');
-	if (span) {
+	let last = document.getElementById('last_time');
+	let next = document.getElementById('next_time');
+	if (last && next) {
+		let nexttime = next.innerHTML;
+		let nm = parseInt(nexttime.slice(0, 2));
+		let ns = parseInt(nexttime.slice(3, 5));
 
-		let string = span.innerHTML;
-		let shours = parseInt(string.slice(0, 2));
-		let sminutes = parseInt(string.slice(3, 5));
-		let sseconds = parseInt(string.slice(6, 8));
-
-		{
-			let current = new Date();
-			let chours = parseInt(current.getHours());
-			let cminutes = parseInt(current.getMinutes());
-			let cseconds = parseInt(current.getSeconds());
-
-			let dhours = chours + shours;
-			let dminutes = cminutes + sminutes;
-			let dseconds = cseconds + sseconds;
-
-			let fix = fixtime(dhours, dminutes, dseconds);
-			let fhours = fix[0];
-			let fminutes = fix[1];
-			let fseconds = fix[2];
-
-			dhours = fhours - chours;
-			dminutes = fminutes - cminutes;
-			dseconds = fseconds - cseconds;
-
-			fix = fixtime(dhours, dminutes, dseconds);
-			fhours = fix[0];
-			fminutes = fix[1];
-			fseconds = fix[2];
-
-			// span.innerHTML = `${fhours}:${fminutes}:${fseconds}`;
+		let m = nm;
+		let s = ns - 1;
+		if (s < 0 && m != 0) {
+			m -= 1;
+			s = 59;
+		}
+		if (m < 0) {
+			m = 0;
+		}
+		if (s < 10) {
+			s = `0${s.toString()}`;
+		} else {
+			m = m.toString();
+		}
+		if (m < 10) {
+			m = `0${m.toString()}`;
+		} else {
+			s = s.toString();
 		}
 
-		function fixtime(h, m, s) {
-
-			// if (s >= 60) {
-			m += Math.floor(s / 60);
-			s = Math.abs(s % 60);
-			// }
-			//  else if (s < 0) {
-			// 	s = Math.abs(s);
-			// 	m -= Math.floor(s / 60);
-			// 	s = s % 60;
-			// }
-			// if (m >= 60) {
-			h += Math.floor(m / 60);
-			m = Math.abs(m % 60);
-			// }
-			if (h > 24) {
-				h -= 24;
-			} else if (h < 0) {
-				h += 24;
-			}
-
-			if (h < 10) {
-				h = `0${h}`;
-			}
-			if (m < 10) {
-				m = `0${m}`;
-			}
-			if (s < 10) {
-				s = `0${s}`;
-			}
-
-			return ([h, m, s]);
-		}
+		next.innerHTML = `${m}:${s}`;
 	}
 }
