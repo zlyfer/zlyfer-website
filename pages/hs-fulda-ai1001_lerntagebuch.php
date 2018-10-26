@@ -13,7 +13,7 @@ $ls = gmDate('s', $lasttime);
 if ($cm < $lm) {
 	$dm = $lm - $cm;
 } else {
-	$dm = 60 - ($cm - $lm) - 1;
+	$dm = 60 - ($cm - $lm) - 1 - 1; // - another one for a reason I'll discover next time
 }
 if ($cs < $ls) {
 	$ds = $ls - $cs;
