@@ -5,7 +5,7 @@ $cm = gmDate('i', $currenttime);
 $cs = gmDate('s', $currenttime);
 
 $lasttime = filemtime('resources/hs-fulda/ai1001-lerntagebuch.html');
-$lh = gmDate('h', $lasttime) + 2;
+$lh = gmDate('H', $lasttime) + 1;
 $lm = gmDate('i', $lasttime);
 $ls = gmDate('s', $lasttime);
 
