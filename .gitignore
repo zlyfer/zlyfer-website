@@ -13,7 +13,6 @@ sites/visual-demonstrations/*
 !sites/visual-demonstrations/draw
 !sites/miscellaneous/converter
 !sites/miscellaneous/discord
-!sites/games/artist.io
 
 # Include Sensitive Sites
 
@@ -21,6 +20,9 @@ sites/visual-demonstrations/*
 !sites/games/.gitkeep
 !sites/miscellaneous/.gitkeep
 !sites/visual-demonstrations/.gitkeep
+
+# Exclude .gitindic's
+!sites/games/artist.io/.gitindic
 
 # Include Generated Files
 resources/hs-fulda/ai1001-lerntagebuch.html
