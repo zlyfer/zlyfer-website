@@ -13,6 +13,7 @@ sites/visual-demonstrations/*
 !sites/visual-demonstrations/draw
 !sites/miscellaneous/converter
 !sites/miscellaneous/discord
+!sites/games/artist.io
 
 # Include Sensitive Sites
 
