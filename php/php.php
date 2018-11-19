@@ -8,7 +8,7 @@ function genCards($name) {
 	$sites = scandir('./sites/'.$name.'/');
 	for ($i=0; $i < count($sites); $i++) {
 		if ($sites[$i] != '.' && $sites[$i] != '..' && $sites[$i] != '.gitkeep') {
-			if (file_exists('./sites/'.$name.'/'.$sites[$i].'/.git')) {
+			if (file_exists('./sites/'.$name.'/'.$sites[$i].'/.git') || file_exists('./sites/'.$name.'/'.$sites[$i].'/.gitindic')) {
 				$ghbtn = '<a class="waves-effect waves-dark btn grey darken-2 grey-text text-lighten-5" target="_blank" href="https://github.com/zlyfer/'.$sites[$i].'">GitHub</a>';
 			} else {
 				$ghbtn = '<a class="disabled waves-effect waves-dark btn">GitHub</a>';
