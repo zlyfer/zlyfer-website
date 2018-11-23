@@ -9,7 +9,7 @@ function genCards($name) {
 	for ($i=0; $i < count($sites); $i++) {
 		if ($sites[$i] != '.' && $sites[$i] != '..' && $sites[$i] != '.gitkeep') {
 			if (file_exists('./sites/'.$name.'/'.$sites[$i].'/.git') || file_exists('./sites/'.$name.'/'.$sites[$i].'/.gitindic')) {
-				$ghbtn = '<a class="waves-effect waves-dark btn grey darken-2 grey-text text-lighten-5" target="_blank" href="https://github.com/zlyfer/'.$sites[$i].'">GitHub</a>';
+				$ghbtn = '<a class="waves-effect waves-dark btn grey darken-2 grey-text text-lighten-5" href="https://github.com/zlyfer/'.$sites[$i].'">GitHub</a>';
 			} else {
 				$ghbtn = '<a class="disabled waves-effect waves-dark btn">GitHub</a>';
 			}
@@ -23,7 +23,7 @@ function genCards($name) {
 '.file_get_contents("./descriptions/".$name.'/'.$sites[$i].".html").'
 </div>
 <div class="card-action green lighten-3">
-<a class="waves-effect waves-dark btn green grey-text text-lighten-5" target="_blank" href="./sites/'.$name.'/'.$sites[$i].'/">Visit Page</a>
+<a class="waves-effect waves-dark btn green grey-text text-lighten-5" href="./sites/'.$name.'/'.$sites[$i].'/">Visit Page</a>
 '.$ghbtn.'
 </div>
 </div>'."\n";

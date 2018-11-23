@@ -57,14 +57,14 @@ genMain();
 
 		<footer class="page-footer green">
 			<div class="container center">
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-2" target="_blank" href="https://github.com/zlyfer">GitHub</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 red darken-2" target="_blank" href="https://www.youtube.com/channel/UCz57bHmcp5TGRY6URQYWLkQ">Youtube</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 blue darken-2" target="_blank" href="https://www.facebook.com/frederik.shull">Facebook</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 pink darken-2" target="_blank" href="https://www.instagram.com/zlyfer/">Instagram</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken-1" target="_blank" href="https://steamcommunity.com/id/zlyfer/">Spotify</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-3" target="_blank" href="https://open.spotify.com/user/zlyfer">Steam</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken" target="_blank" href="https://www.deviantart.com/zlyfer">DeviantArt</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" target="_blank" href="https://www.twitch.tv/ziyfer">Twitch</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-2" href="https://github.com/zlyfer">GitHub</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 red darken-2" href="https://www.youtube.com/channel/UCz57bHmcp5TGRY6URQYWLkQ">Youtube</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 blue darken-2" href="https://www.facebook.com/frederik.shull">Facebook</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 pink darken-2" href="https://www.instagram.com/zlyfer/">Instagram</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken-1" href="https://steamcommunity.com/id/zlyfer/">Spotify</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-3" href="https://open.spotify.com/user/zlyfer">Steam</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken" href="https://www.deviantart.com/zlyfer">DeviantArt</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" href="https://www.twitch.tv/ziyfer">Twitch</a>
 				<div class="row"></div>
 			</div>
 				<div class="footer-copyright">
