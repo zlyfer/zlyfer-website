@@ -14,7 +14,7 @@
 				</div>
 				<div class="col">
 					<h6>Frederik Shull</h6>
-					<h6>zlyfer(at)web.de</h6>
+					<h6>zlyfer(at)pm.me | zlyfer(at)zlyfer.net</h6>
 					<h6>Niesiger-Straße 139</h6>
 					<h6>36039 Fulda</h6>
 				</div>
@@ -63,6 +63,17 @@
 			<h5>Fonts & Icons</h5>
 			<p>This website uses some fonts and icons from Google Fonts.</p>
 			<p>Visit <a href="https://fonts.google.com">Google Fonts</a> for more information.</p>
+		</div>
+	</div>
+
+	<a id="perpageimpressum"></a>
+	<div class="card">
+		<div class="card-content">
+			<h4>Per Page Impressum</h4>
+			<div class="divider"></div>
+			<h5>Sources</h5>
+			<p>This website has mutliple subpages which may use libraries or other files from 3rd parties.</p>
+			<p>Due to the fact that these sources can vary from page to page the explicit sources are linked only on named pages.</p>
 		</div>
 	</div>
 
