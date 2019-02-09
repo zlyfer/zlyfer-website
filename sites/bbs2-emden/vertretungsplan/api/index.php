@@ -12,6 +12,7 @@ if (isset($_GET['interface'])) {
 } else {
     $interface = true;
 }
+$json = "";
 if ($interface == false) {
     require_once("./php/mysql_connect.php");
     $table = "Vertretungsplan";
@@ -21,8 +22,10 @@ if ($interface == false) {
         }
     }
     $query = $sql->query("SELECT * FROM $table");
-    echo("{\n	");
-    echo("\"vertretungen\": [\n		");
+    $json = $json."{\n	";
+    // echo("{\n	");
+    $json = $json."\"vertretungen\": [\n		";
+    // echo("\"vertretungen\": [\n		");
     if ($query->num_rows > 0) {
         $found = false;
         $totalcount = 0;
@@ -35,78 +38,101 @@ if ($interface == false) {
             }
             if ($valid == true) {
                 if ($found == true) {
-                    echo(",\n		");
+                    $json = $json.",\n		";
+                    // echo(",\n		");
                 }
                 $read = false;
-                echo("{\n			");
+                $json = $json."{\n			";
+                // echo("{\n			");
                 if ($_GET['kurs'] != "false") {
-                    echo("\"kurs\": \"".$index['Kurs']."\"");
+                    $json = $json."\"kurs\": \"".$index['Kurs']."\"";
+                    // echo("\"kurs\": \"".$index['Kurs']."\"");
                     $read = true;
                 }
                 if ($_GET['stunde'] != "false") {
                     if ($read == true) {
-                        echo(",\n			");
+                        $json = $json.",\n			";
+                        // echo(",\n			");
                     }
-                    echo("\"stunde\": \"".$index['Stunde']."\"");
+                    $json = $json."\"stunde\": \"".$index['Stunde']."\"";
+                    // echo("\"stunde\": \"".$index['Stunde']."\"");
                     $read = true;
                 }
                 if ($_GET['fach'] != "false") {
                     if ($read == true) {
-                        echo(",\n			");
+                        $json = $json.",\n			";
+                        // echo(",\n			");
                     }
-                    echo("\"fach\": \"".$index['Fach']."\"");
+                    $json = $json."\"fach\": \"".$index['Fach']."\"";
+                    // echo("\"fach\": \"".$index['Fach']."\"");
                     $read = true;
                 }
                 if ($_GET['raum'] != "false") {
                     if ($read == true) {
-                        echo(",\n			");
+                        $json = $json.",\n			";
+                        // echo(",\n			");
                     }
-                    echo("\"raum\": \"".$index['Raum']."\"");
+                    $json = $json."\"raum\": \"".$index['Raum']."\"";
+                    // echo("\"raum\": \"".$index['Raum']."\"");
                     $read = true;
                 }
                 if ($_GET['lehrer'] != "false") {
                     if ($read == true) {
-                        echo(",\n			");
+                        $json = $json.",\n			";
+                        // echo(",\n			");
                     }
-                    echo("\"lehrer\": \"".$index['Lehrer']."\"");
+                    $json = $json."\"lehrer\": \"".$index['Lehrer']."\"";
+                    // echo("\"lehrer\": \"".$index['Lehrer']."\"");
                     $read = true;
                 }
                 if ($_GET['info'] != "false") {
                     if ($read == true) {
-                        echo(",\n			");
+                        $json = $json.",\n			";
+                        // echo(",\n			");
                     }
-                    echo("\"info\": \"".$index['Info']."\"");
+                    $json = $json."\"info\": \"".$index['Info']."\"";
+                    // echo("\"info\": \"".$index['Info']."\"");
                     $read = true;
                 }
                 if ($_GET['vertretungstext'] != "false") {
                     if ($read == true) {
-                        echo(",\n			");
+                        $json = $json.",\n			";
+                        // echo(",\n			");
                     }
-                    echo("\"vertretungstext\": \"".$index['Vertretungstext']."\"");
+                    $json = $json."\"vertretungstext\": \"".$index['Vertretungstext']."\"";
+                    // echo("\"vertretungstext\": \"".$index['Vertretungstext']."\"");
                     $read = true;
                 }
                 if ($_GET['datum'] != "false") {
                     if ($read == true) {
-                        echo(",\n			");
+                        $json = $json.",\n			";
+                        // echo(",\n			");
                     }
-                    echo("\"datum\": \"".$index['Datum']."\"");
+                    $json = $json."\"datum\": \"".$index['Datum']."\"";
+                    // echo("\"datum\": \"".$index['Datum']."\"");
                     $read = true;
                 }
                 if ($_GET['wochentag'] != "false") {
                     if ($read == true) {
-                        echo(",\n			");
+                        $json = $json.",\n			";
+                        // echo(",\n			");
                     }
-                    echo("\"wochentag\": \"".$index['Wochentag']."\"");
+                    $json = $json."\"wochentag\": \"".$index['Wochentag']."\"";
+                    // echo("\"wochentag\": \"".$index['Wochentag']."\"");
                     $read = true;
                 }
-                echo("\n		}");
+                $json = $json."\n		}";
+                // echo("\n		}");
                 $found = true;
                 $totalcount++;
             }
         }
     }
-    echo("\n	]");
-    echo("\n}");
+    $json = $json."\n	]";
+    // echo("\n	]");
+    $json = $json."\n}";
+    // echo("\n}");
+    echo($json);
     exit();
 }
 ?>
@@ -120,7 +146,7 @@ if ($interface == false) {
     --><body><!--
         --><div id="io"><!--
             --><input id="input" spellcheck="false" class="text" type=text placeholder="API Parameter"/><!--
-            --><input readonly id="output" spellcheck="false" class="text" type=text placeholder="https://api.vplan.zlyfer.net/?interface=false&vshistory=false"/><!--
+            --><input readonly id="output" spellcheck="false" class="text" type=text placeholder="https://api.vplan.zlyfer.net/?interface=false&vshistory=false&javascript=false"/><!--
             --><input id="copy" class="button" type=button value="Kopieren"/><!--
             --><a href="https://vplan.zlyfer.net"><img class="mainLogo" id="mainLogoVPlan" src="./images/mobile.png"></a><!--
         --></div><!--
