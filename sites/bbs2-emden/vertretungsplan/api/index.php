@@ -132,7 +132,7 @@ if ($interface == false) {
     // echo("\n	]");
     $json = $json."\n}";
     // echo("\n}");
-    echo($json);
+    echo($json."test");
     exit();
 }
 ?>
