@@ -132,7 +132,16 @@ if ($interface == false) {
     // echo("\n	]");
     $json = $json."\n}";
     // echo("\n}");
-    echo($json."test");
+    if (isset($_GET['plainjson'])) {
+        if ($_GET['plainjson'] == "false") {
+            echo("<script> var result = ".$json."; </script>");
+        }
+    }
+    if (isset($_GET['javascript'])) {
+        if ($_GET['javascript'] == "false") {
+            echo($json);
+        }
+    }
     exit();
 }
 ?>
