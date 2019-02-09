@@ -1,23 +1,48 @@
 window.onload = function() {
-
 	function showParameter() {
-		const showlist = ["kurs", "stunde", "fach", "raum", "lehrer", "info", "vertretungstext", "datum", "wochentag", "vsnormal", "vshistory"];
+		const showlist = [
+			"kurs",
+			"stunde",
+			"fach",
+			"raum",
+			"lehrer",
+			"info",
+			"vertretungstext",
+			"datum",
+			"wochentag",
+			"vsnormal",
+			"vshistory",
+			"plainjson",
+			"javascript"
+		];
 		var showParameterAddon = "";
 
 		for (var i = 0; i < showlist.length; i++) {
 			var button = document.getElementById(showlist[i]);
-			if (button.className.indexOf(" on") == -1 && button.className.indexOf(" off") != -1) {
+			if (
+				button.className.indexOf(" on") == -1 &&
+				button.className.indexOf(" off") != -1
+			) {
 				showParameterAddon += "&" + showlist[i] + "=false";
 			}
 		}
 
-		return (showParameterAddon);
-
+		return showParameterAddon;
 	}
 
 	function inputCheck() {
 		const parameter = document.getElementById("input").value.split(" ");
-		const allowed = ["Kurs", "Stunde", "Fach", "Raum", "Lehrer", "Info", "Vertretungstext", "Datum", "Wochentag"];
+		const allowed = [
+			"Kurs",
+			"Stunde",
+			"Fach",
+			"Raum",
+			"Lehrer",
+			"Info",
+			"Vertretungstext",
+			"Datum",
+			"Wochentag"
+		];
 		const fixlink = "https://api.vplan.zlyfer.net/?interface=false";
 		const showParameterAddon = showParameter();
 		var valid = true;
@@ -26,7 +51,10 @@ window.onload = function() {
 		var link = "";
 
 		for (var i = 0; i < parameter.length; i += 2) {
-			if (allowed.indexOf(parameter[i]) != -1 && used.indexOf(parameter[i]) == -1) {
+			if (
+				allowed.indexOf(parameter[i]) != -1 &&
+				used.indexOf(parameter[i]) == -1
+			) {
 				object[parameter[i]] = parameter[i + 1];
 				used.push(parameter[i]);
 			} else {
@@ -44,14 +72,19 @@ window.onload = function() {
 		}
 
 		if (valid == true) {
-			document.getElementById("output").placeholder = fixlink + showParameterAddon + link;
+			document.getElementById("output").placeholder =
+				fixlink + showParameterAddon + link;
 		} else {
-			document.getElementById("output").placeholder = fixlink + showParameterAddon;
+			document.getElementById("output").placeholder =
+				fixlink + showParameterAddon;
 		}
-	};
+	}
 
 	function valueCheck() {
-		if (document.getElementById("value").value != "" && document.getElementById("types").value != "Typ") {
+		if (
+			document.getElementById("value").value != "" &&
+			document.getElementById("types").value != "Typ"
+		) {
 			document.getElementById("add").disabled = false;
 		} else {
 			document.getElementById("add").disabled = true;
@@ -69,72 +102,90 @@ window.onload = function() {
 	}
 	document.getElementById("vsnormal").onclick = function() {
 		if (this.className.indexOf(" on") == -1) {
-			toggleBtn("vsnormal")
-			toggleBtn("vshistory")
+			toggleBtn("vsnormal");
+			toggleBtn("vshistory");
 		}
 	};
 	document.getElementById("vshistory").onclick = function() {
 		if (this.className.indexOf(" on") == -1) {
-			toggleBtn("vshistory")
-			toggleBtn("vsnormal")
+			toggleBtn("vshistory");
+			toggleBtn("vsnormal");
+		}
+	};
+	document.getElementById("plainjson").onclick = function() {
+		if (this.className.indexOf(" on") == -1) {
+			toggleBtn("plainjson");
+			toggleBtn("javascript");
+		}
+	};
+	document.getElementById("javascript").onclick = function() {
+		if (this.className.indexOf(" on") == -1) {
+			toggleBtn("javascript");
+			toggleBtn("plainjson");
 		}
 	};
 	document.getElementById("kurs").onclick = function() {
-		toggleBtn("kurs")
+		toggleBtn("kurs");
 	};
 	document.getElementById("stunde").onclick = function() {
-		toggleBtn("stunde")
+		toggleBtn("stunde");
 	};
 	document.getElementById("fach").onclick = function() {
-		toggleBtn("fach")
+		toggleBtn("fach");
 	};
 	document.getElementById("raum").onclick = function() {
-		toggleBtn("raum")
+		toggleBtn("raum");
 	};
 	document.getElementById("lehrer").onclick = function() {
-		toggleBtn("lehrer")
+		toggleBtn("lehrer");
 	};
 	document.getElementById("info").onclick = function() {
-		toggleBtn("info")
+		toggleBtn("info");
 	};
 	document.getElementById("vertretungstext").onclick = function() {
-		toggleBtn("vertretungstext")
+		toggleBtn("vertretungstext");
 	};
 	document.getElementById("datum").onclick = function() {
-		toggleBtn("datum")
+		toggleBtn("datum");
 	};
 	document.getElementById("wochentag").onclick = function() {
-		toggleBtn("wochentag")
+		toggleBtn("wochentag");
 	};
 	document.getElementById("input").oninput = function() {
 		inputCheck();
 	};
 	document.getElementById("value").oninput = function() {
 		valueCheck();
-	}
+	};
 	document.getElementById("types").onchange = function() {
 		valueCheck();
-	}
+	};
 	document.getElementById("output").onclick = function() {
 		window.open(document.getElementById("output").placeholder);
-	}
+	};
 	document.getElementById("copy").onclick = function() {
-		document.getElementById("output").style.backgroundColor = "var(--accent-color)";
-		document.getElementById("output").value = document.getElementById("output").placeholder;
+		document.getElementById("output").style.backgroundColor =
+			"var(--accent-color)";
+		document.getElementById("output").value = document.getElementById(
+			"output"
+		).placeholder;
 		document.querySelector("#output").select();
 		document.execCommand("copy");
 		window.getSelection().removeAllRanges();
 		document.activeElement.blur();
 		document.getElementById("output").value = "";
-	}
+	};
 	document.getElementById("copy").onmouseout = function() {
-		document.getElementById("output").style.backgroundColor = "var(--light-theme-color)";
-	}
+		document.getElementById("output").style.backgroundColor =
+			"var(--light-theme-color)";
+	};
 	document.getElementById("add").onclick = function() {
 		var key = document.getElementById("types").value;
 		if (key != "Typ") {
 			var link = document.getElementById("input").value;
-			var value = encodeURIComponent(document.getElementById("value").value.trim());
+			var value = encodeURIComponent(
+				document.getElementById("value").value.trim()
+			);
 
 			if (link[link.length - 1] != " " && link.length != 0) {
 				value = link + " " + key + " " + value;
@@ -148,9 +199,18 @@ window.onload = function() {
 			inputCheck();
 			valueCheck();
 		}
-	}
+	};
 	document.getElementById("clear").onclick = function() {
-		const allowed = ["Kurs", "Stunde", "Fach", "Raum", "Lehrer", "Info", "Vertretungstext", "Datum"];
+		const allowed = [
+			"Kurs",
+			"Stunde",
+			"Fach",
+			"Raum",
+			"Lehrer",
+			"Info",
+			"Vertretungstext",
+			"Datum"
+		];
 		for (key in allowed) {
 			document.getElementById(allowed[key]).disabled = false;
 		}
@@ -160,5 +220,4 @@ window.onload = function() {
 
 		inputCheck();
 	};
-
-}
+};

@@ -129,6 +129,10 @@ if ($interface == false) {
         --><input id="vshistory" class="button vs off" type=button value="Gesamter Vertretungplan (seit dem 24.11.2017)"/><!--
         --></div><!--
         --><div class="doc"><!--
+        --><input id="plainjson" class="button vs on first" type=button value="Plain JSON"/><!--
+        --><input id="javascript" class="button vs off" type=button value="Javascript"/><!--
+        --></div><!--
+        --><div class="doc"><!--
             --><input id="kurs" class="button cat on first" type=button value="Kurs"/><!--
             --><input id="stunde" class="button cat on" type=button value="Stunde"/><!--
             --><input id="fach" class="button cat on" type=button value="Fach"/><!--
