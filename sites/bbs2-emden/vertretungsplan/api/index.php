@@ -134,7 +134,6 @@ if ($interface == false) {
     // echo("\n}");
     if (isset($_GET['plainjson'])) {
         if ($_GET['plainjson'] == "false") {
-            // echo("<script> var result = ".$json."; </script>");
             echo("var result = ".$json.";");
         }
     }
