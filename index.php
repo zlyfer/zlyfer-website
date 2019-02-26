@@ -64,7 +64,7 @@ genMain();
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken-1" href="https://steamcommunity.com/id/zlyfer/">Spotify</a>
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-3" href="https://open.spotify.com/user/zlyfer">Steam</a>
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken" href="https://www.deviantart.com/zlyfer">DeviantArt</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" href="https://www.twitch.tv/ziyfer">Twitch</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" href="https://www.twitch.tv/zlyfa">Twitch</a>
 				<div class="row"></div>
 			</div>
 				<div class="footer-copyright">
