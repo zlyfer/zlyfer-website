@@ -10,7 +10,7 @@ logging.basicConfig(format="\n%(levelname)s: @'%(asctime)s' in '%(name)s':\n> %
 
 credentials = json.loads(codecs.open('/home/zlyfer/tokens/hs-fulda_credentials.json', 'r', 'utf-8').read())
 url1 = 'https://elearning.hs-fulda.de/ai/login/index.php'
-url2 = 'https://elearning.hs-fulda.de/ai/mod/journal/edit.php?id=20748'
+# url2 = 'https://elearning.hs-fulda.de/ai/mod/journal/edit.php?id=20748'url2 = 'https://elearning.hs-fulda.de/ai/mod/journal/edit.php?id=24349'
 
 session = requests.session()
 session.post(url1, data=credentials)
