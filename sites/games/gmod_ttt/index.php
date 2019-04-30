@@ -43,7 +43,7 @@
         <p class="vanish" id="message" onclick="AddMessageToBuffer('Downloading files', 'test')" ></p>
         <p class="vanish infotext infotext2" id="csstext">You need the <span class="red">CSS-Textures</span> for this server!</p>
         <p class="vanish infotext infotext2" id="collection">Download zlyfer's TTT Collection: <span class="red"><a href="http://tiny.cc/zlyfattt">tiny.cc/zlyfattt</a></span></p>
-        <p class="vanish infotext infotext2" id="collection">Join our Discord: <span class="red"><a href="https://discord.gg/e53GYTV">https://discord.gg/e53GYTV</a></span></p>
+        <p class="vanish infotext infotext2" id="collection">Join our Discord: <span class="red"><a href="https://discord.gg/ZtZqsTp">https://discord.gg/ZtZqsTp</a></span></p>
 		<p class="vanish infotext infotext2" id="rules">Server Rule: The <span class="red">Voice chat</span> is only allowed if you are at least <span class="red">16 years</span> old!</p>
         <img id="clientavatar" onclick="SetStatusChanged('Sending client info...')" src="<?php echo ($steamapiclient["avatarfull"]); ?>">
         <div onclick="SetFilesTotal(1), SetFilesNeeded(1), DownloadingFile(1)" class="vanish" id="progressbar">
