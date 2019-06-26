@@ -335,11 +335,11 @@
             <br>
             <form method="POST" action="./index.php?action=feedback">
                 <?php
-                    if (isset($_SESSION['username'])) {
-                        echo("<input maxlength=\"16\" value=\"".$_SESSION['username']."\" class=\"forbidden\" readonly=\"readonly\" type=\"text\" name=\"name\"/>\n");
-                    } else {
-                        echo("<input required maxlength=\"16\" placeholder=\"Name:\" type=\"text\" name=\"name\"/>\n");
-                    }
+                    // if (isset($_SESSION['username'])) {
+                    //     echo("<input maxlength=\"16\" value=\"".$_SESSION['username']."\" class=\"forbidden\" readonly=\"readonly\" type=\"text\" name=\"name\"/>\n");
+                    // } else {
+                    //     echo("<input required maxlength=\"16\" placeholder=\"Name:\" type=\"text\" name=\"name\"/>\n");
+                    // }
                 ?>
                 <textarea maxlength="4096" required name="feedback" placeholder="Dein Feedback:"></textarea>
                 <input type="submit" value="Feedback senden"/>

@@ -94,7 +94,7 @@
                 require_once('./php/edit_stundenplan.php');
                 header("Location: ./index.php?site=account");
                 break;
-            // case "feedback":
+            case "feedback":
             //     if (isset($_POST['feedback'])) {
             //         if (isset($_POST['name'])) {
             //             $feedbackContent = $_POST['feedback'];
@@ -110,7 +110,7 @@
             //             header("Location: ./index.php?site=feedback");
             //         }
             //     }
-            //     break;
+                break;
         }
     }
 
