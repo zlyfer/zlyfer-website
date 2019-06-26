@@ -331,7 +331,7 @@
 
         <div class="maincard" id="feedback">
             <h1>Feedback</h1>
-            <hr>
+            <!-- <hr>
             <br>
             <form method="POST" action="./index.php?action=feedback">
                 <?php
@@ -343,7 +343,7 @@
                 ?>
                 <textarea maxlength="4096" required name="feedback" placeholder="Dein Feedback:"></textarea>
                 <input type="submit" value="Feedback senden"/>
-            </form>
+            </form> -->
             <?php showFeedback($sql); ?>
         </div>
 

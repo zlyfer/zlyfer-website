@@ -94,23 +94,23 @@
                 require_once('./php/edit_stundenplan.php');
                 header("Location: ./index.php?site=account");
                 break;
-            case "feedback":
-                if (isset($_POST['feedback'])) {
-                    if (isset($_POST['name'])) {
-                        $feedbackContent = $_POST['feedback'];
-                        $feedbackName = $_POST['name'];
-                        $fDd = date(d);
-                        $fDm = date(m);
-                        $fDy = date(y);
-                        $fDH = date(H);
-                        $fDi = date(i);
-                        $feedbackDatum = "{$fDd}.{$fDm}.{$fDy}";
-                        $feedbackZeit = "{$fDH}:{$fDi}";
-                        $sql->query("INSERT INTO Feedback (Name, Feedback, Datum, Zeit) VALUES ('$feedbackName', '$feedbackContent', '$feedbackDatum', '$feedbackZeit')");
-                        header("Location: ./index.php?site=feedback");
-                    }
-                }
-                break;
+            // case "feedback":
+            //     if (isset($_POST['feedback'])) {
+            //         if (isset($_POST['name'])) {
+            //             $feedbackContent = $_POST['feedback'];
+            //             $feedbackName = $_POST['name'];
+            //             $fDd = date(d);
+            //             $fDm = date(m);
+            //             $fDy = date(y);
+            //             $fDH = date(H);
+            //             $fDi = date(i);
+            //             $feedbackDatum = "{$fDd}.{$fDm}.{$fDy}";
+            //             $feedbackZeit = "{$fDH}:{$fDi}";
+            //             $sql->query("INSERT INTO Feedback (Name, Feedback, Datum, Zeit) VALUES ('$feedbackName', '$feedbackContent', '$feedbackDatum', '$feedbackZeit')");
+            //             header("Location: ./index.php?site=feedback");
+            //         }
+            //     }
+            //     break;
         }
     }
 
