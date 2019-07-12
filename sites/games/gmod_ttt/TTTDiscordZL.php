@@ -1,6 +1,5 @@
 <?php
-//error_reporting(0);
-testerror
+error_reporting(0);
 include('/home/zlyfer/tokens/sql_credentials.php');
 $sqlServer = "127.0.0.1";
 $sqlDatabase = "TTTDiscordZL";
