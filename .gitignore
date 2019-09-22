@@ -15,8 +15,6 @@ sites/visual-demonstrations/*
 !sites/miscellaneous/converter
 !sites/miscellaneous/discord
 
-# Include Sensitive Sites
-
 # Exclude .gitkeep's
 !sites/games/.gitkeep
 !sites/miscellaneous/.gitkeep
@@ -28,3 +26,11 @@ sites/visual-demonstrations/*
 # Include Generated Files
 resources/hs-fulda/ai1001-lerntagebuch.html
 sites/bbs2-emden/vertretungsplan/uploads/
+
+# Include Links
+sites/bbs2-emden/vertretungsplan-api
+sites/bbs2-emden/vertretungsplan/api/php
+sites/bbs2-emden/vertretungsplan/api/styles
+sites/bbs2-emden/vertretungsplan/api/jscript
+sites/bbs2-emden/vertretungsplan/api/images
+# Include Sensitive Sites
