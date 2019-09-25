@@ -54,7 +54,7 @@ function genMain() {
 		$pages = scandir('./pages');
 		$page = $_GET["page"];
 		array_splice($pages,0,2);
-		if (in_array($page.'.php', $pages)) {
+		if (in_array($page.'.php', $pages) && $_GET["page"] != "hs-fulda-ai1001_lerntagebuch") {
 			include('./pages/'.$page.'.php');
 		} else {
 			include('./pages/404.php');

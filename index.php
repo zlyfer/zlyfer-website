@@ -22,7 +22,7 @@
 						<li class="<?php if ($active == "games") {echo("active");}?> waves-effect"><a href="./?site=games">Games</a></li>
 						<li class="<?php if ($active == "visual-demonstrations") {echo("active");}?> waves-effect"><a href="./?site=visual-demonstrations">Visual Demonstrations</a></li>
 						<li class="<?php if ($active == "bbs2-emden") {echo("active");}?> waves-effect"><a href="./?site=bbs2-emden">BBS II Emden</a></li>
-						<li class="<?php if ($active == "hs-fulda") {echo("active");}?> waves-effect"><a href="./?site=hs-fulda">HS Fulda</a></li>
+						<!-- <li class="<?php //if ($active == "hs-fulda") {echo("active");}?> waves-effect"><a href="./?site=hs-fulda">HS Fulda</a></li> -->
 						<li class="<?php if ($active == "miscellaneous") {echo("active");}?> waves-effect"><a href="./?site=miscellaneous">Miscellaneous</a></li>
 					</ul>
 					<ul class="right">
@@ -44,7 +44,7 @@
 				<li><a class="<?php if ($active == "games") {echo("grey lighten-1");}?> waves-effect" href="./?site=games"><i class="material-icons">insert_emoticon</i>Games</a></li>
 				<li><a class="<?php if ($active == "visual-demonstrations") {echo("grey lighten-1");}?> waves-effect" href="./?site=visual-demonstrations"><i class="material-icons">filter_tilt_shift</i>Visual Demonstrations</a></li>
 				<li><a class="<?php if ($active == "bbs2-emden") {echo("grey lighten-1");}?> waves-effect" href="./?site=bbs2-emden"><i class="material-icons">school</i>BBS II Emden</a></li>
-				<li><a class="<?php if ($active == "hs-fulda") {echo("grey lighten-1");}?> waves-effect" href="./?site=hs-fulda"><i class="material-icons">school</i>HS Fulda</a></li>
+				<!-- <li><a class="<?php // if ($active == "hs-fulda") {echo("grey lighten-1");}?> waves-effect" href="./?site=hs-fulda"><i class="material-icons">school</i>HS Fulda</a></li> -->
 				<li><a class="<?php if ($active == "miscellaneous") {echo("grey lighten-1");}?> waves-effect" href="./?site=miscellaneous"><i class="material-icons">bubble_chart</i>Miscellaneous</a></li>
 			</ul>
 		</header>
