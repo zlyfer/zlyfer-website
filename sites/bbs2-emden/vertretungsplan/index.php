@@ -315,7 +315,7 @@
                     <h2>Klicke hier um zu dem RSS-Feed für den Vertretungsplan zu gelangen.</h2>
                 </div>
             </a> -->
-            <a href="https://api.vplan.zlyfer.net">
+            <a href="https://old.zlyfer.net/sites/bbs2-emden/vertretungsplan-api/">
                 <div class="information_card hover">
                     <h1>API-Interface</h1>
                     <h2>Du willst deinen eigenen Service anbieten weißt aber nicht wie du an die Daten vom Vertretungsplan kommst? Benutze unsere API um einen einfachen Zugriff auf unsere saubere Datenbank zu gelangen.</h2>

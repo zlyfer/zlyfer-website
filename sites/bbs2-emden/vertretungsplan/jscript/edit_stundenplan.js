@@ -62,7 +62,7 @@ function stundenplan_suche(call) {
 }
 
 function save_stundenplan() {
-  var new_location = "https://vplan.zlyfer.net/index.php";
+  var new_location = "https://old.zlyfer.net/sites/bbs2-emden/vertretungsplan//index.php";
   var facher = document.getElementsByClassName("stundenplan_fach_Get");
   var facher_entries;
   var entry;

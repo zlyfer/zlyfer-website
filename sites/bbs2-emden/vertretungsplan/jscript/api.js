@@ -43,7 +43,7 @@ window.onload = function() {
 			"Datum",
 			"Wochentag"
 		];
-		const fixlink = "https://api.vplan.zlyfer.net/?interface=false";
+		const fixlink = "https://old.zlyfer.net/sites/bbs2-emden/vertretungsplan-api//?interface=false";
 		const showParameterAddon = showParameter();
 		var valid = true;
 		var object = {};

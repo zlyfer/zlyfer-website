@@ -155,9 +155,9 @@ if ($interface == false) {
     --><body><!--
         --><div id="io"><!--
             --><input id="input" spellcheck="false" class="text" type=text placeholder="API Parameter"/><!--
-            --><input readonly id="output" spellcheck="false" class="text" type=text placeholder="https://api.vplan.zlyfer.net/?interface=false&vshistory=false&javascript=false"/><!--
+            --><input readonly id="output" spellcheck="false" class="text" type=text placeholder="https://old.zlyfer.net/sites/bbs2-emden/vertretungsplan-api//?interface=false&vshistory=false&javascript=false"/><!--
             --><input id="copy" class="button" type=button value="Kopieren"/><!--
-            --><a href="https://vplan.zlyfer.net"><img class="mainLogo" id="mainLogoVPlan" src="./images/mobile.png"></a><!--
+            --><a href="https://old.zlyfer.net/sites/bbs2-emden/vertretungsplan/"><img class="mainLogo" id="mainLogoVPlan" src="./images/mobile.png"></a><!--
         --></div><!--
         --><div class="doc"><!--
         --><input id="vsnormal" class="button vs on first" type=button value="Aktueller Vertretungplan"/><!--
