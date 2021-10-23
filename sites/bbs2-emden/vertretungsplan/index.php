@@ -357,10 +357,6 @@
                   <th>Name</th>
                   <th id="impressum_right">Tarek Harms</th>
                 </tr>
-                <tr>
-                  <th>Adresse</th>
-                  <th id="impressum_right">26721 Emden</th>
-                </tr>
               </tbody>
             </table>
             <hr>
@@ -372,12 +368,8 @@
                   <th id="impressum_right">Frederik Shull</th>
                 </tr>
                 <tr>
-                  <th>Adresse</th>
-                  <th id="impressum_right">36039 Fulda</th>
-                </tr>
-                <tr>
                   <th>E-Mail</th>
-                  <th id="impressum_right">zlyfer(at)web.de</th>
+                  <th id="impressum_right">zlyfer+vplan(at)pm.me</th>
                 </tr>
               </tbody>
             </table>
