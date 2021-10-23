@@ -10,13 +10,10 @@
 				<div class="col s2">
 					<h6><strong>Name:</strong></h6>
 					<h6><strong>E-Mail:</strong></h6>
-					<h6><strong>Adresse:</strong></h6>
 				</div>
 				<div class="col">
 					<h6>Frederik Shull</h6>
 					<h6>zlyfer(at)pm.me | zlyfer(at)zlyfer.net</h6>
-					<h6>Niesiger-Straße 139</h6>
-					<h6>36039 Fulda</h6>
 				</div>
 			</div>
 		</div>
