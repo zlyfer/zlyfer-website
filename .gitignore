@@ -1,7 +1,7 @@
 # Miscellaneous
-231247221722447010617822617395106118131232120591.ico
 .idea/
 .vscode/
+desktop.ini
 
 # GitHub-Sites
 sites/games/*
@@ -33,5 +33,8 @@ sites/bbs2-emden/vertretungsplan/api/php
 sites/bbs2-emden/vertretungsplan/api/styles
 sites/bbs2-emden/vertretungsplan/api/jscript
 sites/bbs2-emden/vertretungsplan/api/images
+
+# Auto-Pull Mechanism
+output.txt
 
 # Include Sensitive Sites

@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+// Path to sql_credentials.php
 include '/home/zlyfer/tokens/sql_credentials.php';
 $sqlServer = "127.0.0.1";
 $sqlDatabase = "TTTDiscordZL";
@@ -36,12 +37,20 @@ if (isset($_GET['token'])) {
           }
         }
         if (isset($_GET['linkDiscordID']) && isset($_GET['linkSteamID64'])) {
-          $discordId = $_GET['linkDiscordID'];
-          $steamId64 = $_GET['linkSteamID64'];
+          $linkDiscordID = $_GET['linkDiscordID'];
+          $linkSteamID64 = $_GET['linkSteamID64'];
           $sql->query(
-            "INSERT INTO `$GuildID` (`DiscordID`, `SteamID64`, `Muted`) VALUES ('$discordId', '$steamId64', '0') ON DUPLICATE KEY UPDATE DiscordID = $discordId"
+            "INSERT INTO `$GuildID` (DiscordID, SteamID64, Muted, Connected) VALUES ($linkDiscordID, $linkSteamID64, 0, 0) ON DUPLICATE KEY UPDATE `DiscordID` = '" .
+              $linkDiscordID .
+              "', `SteamID64` = '" .
+              $linkSteamID64 .
+              "', `Muted` = '0', `Connected` = '0'"
           );
-          echo "Linked SteamID64 $steamId64 with DiscordID $discordId on Discord Server $GuildID!";
+        }
+        if (isset($_GET['connected']) && isset($_GET['player'])) {
+          $connected = $_GET['connected'];
+          $player = $_GET['player'];
+          $sql->query("UPDATE `$GuildID` SET `Connected` = '$connected' WHERE `SteamID64` = '$player'");
         }
       } else {
         echo nl2br("Access denied!\n");

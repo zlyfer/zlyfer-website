@@ -13,7 +13,7 @@
 				</div>
 				<div class="col">
 					<h6>Frederik Shull</h6>
-					<h6>zlyfer(at)pm.me | zlyfer(at)zlyfer.net</h6>
+					<h6>zlyfer(at)zlyfer.net</h6>
 				</div>
 			</div>
 		</div>
