@@ -1,6 +1,6 @@
 
 <div class="container">
-	<h3 class="center">Home ♥</h3>
+	<h3 class="center">Home</h3>
 	<div class="card-content">
 		<a id="newurl" href="https://zlyfer.net">New Website: zlyfer.net</a>
 		<!-- <div id="home" class="parallax-container">
