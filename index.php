@@ -57,15 +57,16 @@ genMain();
 
 		<footer class="page-footer green">
 			<div class="container center">
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-2" href="https://github.com/zlyfer">GitHub</a>
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 red darken-2" href="https://youtube.com/channel/UCz57bHmcp5TGRY6URQYWLkQ">Youtube</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-2" href="https://www.tiktok.com/@zlyfer2">TikTok</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" href="https://twitch.tv/zlyfa">Twitch</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-2" href="https://github.com/zlyfer">GitHub</a>
 				<!-- <a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 blue darken-2" href="">Facebook</a> -->
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 pink darken-2" href="https://instagram.com/zlyfer.arts/">Instagram</a>
 				<!-- <a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken-1" href="https://open.spotify.com/user/zlyfer">Spotify</a> -->
 				<!-- <a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-3" href="https://steamcommunity.com/id/zlyfer/">Steam</a> -->
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken" href="https://deviantart.com/zlyfer">DeviantArt</a>
+				<!-- <a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 green darken" href="https://deviantart.com/zlyfer">DeviantArt</a> -->
 				<!-- <a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" href="https://twitch.tv/slyncarli">Twitch SlyNCarli</a> -->
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" href="https://twitch.tv/zlyfa">Twitch</a>
 				<div class="row"></div>
 			</div>
 				<div class="footer-copyright">
