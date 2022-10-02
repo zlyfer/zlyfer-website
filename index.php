@@ -59,7 +59,7 @@ genMain();
 			<div class="container center">
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 red darken-2" href="https://youtube.com/channel/UCz57bHmcp5TGRY6URQYWLkQ">Youtube</a>
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-2" href="https://www.tiktok.com/@zlyfer2">TikTok</a>
-				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" href="https://twitch.tv/zlyfa">Twitch</a>
+				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 purple darken-2" href="https://twitch.tv/zlyfer2">Twitch</a>
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 grey darken-2" href="https://github.com/zlyfer">GitHub</a>
 				<!-- <a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 blue darken-2" href="">Facebook</a> -->
 				<a class="hoverable waves-effect waves-dark btn grey-text text-lighten-5 pink darken-2" href="https://instagram.com/zlyfer.arts/">Instagram</a>
